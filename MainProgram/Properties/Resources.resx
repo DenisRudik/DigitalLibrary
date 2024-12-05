@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BookDay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookDay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_success_45x45__png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\image_success 45x45 (png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGround_Passwrod_Recovery_Assistent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BackGround_Passwrod_Recovery_Assistent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowBackCursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\ArrowBackCursor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_hide_password_40x40_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_hide_password 40x40(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoveToBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\LoveToBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdminGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\AdminGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_green_success_16x16__png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\image_green_success 16x16 (png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="books_on_shelf_96x96__png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\books_on_shelf 96x96 (png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_book_24x24_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_book 24x24(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGround_Welcome_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BackGround_Welcome_Form.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_recovery_password_48x48_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_recovery_password 48x48(png) .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookLove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookLove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_For_Message_Box" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Sound_For_Message_Box.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="icon_exit_24x24_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_exit 24x24(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StackOfBooks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\StackOfBooks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookHistory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookAdventure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookAdventure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookLaw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookLaw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\UserGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_password_48x48_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_password 48x48(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_add_secret_password_40x40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_add_secret_password 40x40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="World" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\World.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconCursorExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IconCursorExit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExitAppGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\ExitAppGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_document_48x48_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_document 48x48(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_settings_24x24_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_settings 24x24(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookStrategy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookStrategy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_user_data_48x48_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_user_data 48x48(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Books" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\Books.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="welcome_64x64_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\welcome 64x64(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_close_app_256x256_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_close_app 256x256(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LicenseAgreementClicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\LicenseAgreementClicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_employee_48x48_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_employee 48x48(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_count_download_book_32x32_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_count_download_book 32x32(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BuyBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BuyBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_show_password_40x40_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_show_password 40x40(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\DocGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DigitalLibrary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\DigitalLibrary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_mail_48x48_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_mail 48x48(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconDefaultExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IconDefaultExit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGround_Authorization_Form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BackGround_Authorization_Form.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_settings_64x64_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_settings 64x64(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoadingScreen_gif_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\LoadingScreen(gif).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_reader_person_48x48__png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_reader_person 48x48 (png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_Confirmed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Sound_Confirmed.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="icon_user_24x24_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_user 24x24(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGround_ForM_Registration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BackGround_ForM_Registration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_select_book_64x64_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_select_book 64x64(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="found_teacher_by_last_name 48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\found_teacher_by_last_name 48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookMap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookMap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_menu_32x32_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_menu 32x32(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowBackDefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\ArrowBackDefault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackgroundGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loading_screen (png)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\loading_screen (png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="select_genre_book__64x64_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\select_genre_book  64x64(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookMedicine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookMedicine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_Critical_Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Sound_Critical_Error.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LicenseAgreementCursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\LicenseAgreementCursor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookSport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookSport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookSimple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookSimple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="who_to_use_app_96x96__png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\who_to_use_app 96x96 (png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookLaptop 200x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookLaptop 200x200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StudentWithBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\StudentWithBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_last_download_book_32x32_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_last_download_book 32x32(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Sound_Warning.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="icon_sex_48x48_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_sex 48x48(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\FormGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGroundWelcomeForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BackGroundWelcomeForm.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WelcomeFormGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\WelcomeFormGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_Critical_Error_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Sound_Critical_Error_2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="icon_help_30x30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_help 30x30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookContact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BookContact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_welcome_256x256_png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_welcome 256x256(png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_reader_person_96x96__png_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\icon_reader_person 96x96 (png).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconCursorAuth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IconCursorAuth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconDefaultAuth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IconDefaultAuth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconCursorReg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IconCursorReg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconDefaultReg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IconDefaultReg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegNickName" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegNickName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegRecordBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegRecordBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegSecretPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegSecretPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegSex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegSex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegShowPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegShowPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegNickNameCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegNickNameCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegPassCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegPassCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegRecordBookCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegRecordBookCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegSecretPassCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegSecretPassCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegSexCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegSexCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictRegHidePass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictRegHidePass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGroundAuthForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BackGroundAuthForm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictAuthHidePass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictAuthHidePass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PictAuthShowPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\PictAuthShowPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrashCan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\TrashCan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrashCanGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\TrashCanGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGroundFormReg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BackGroundFormReg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrashCanAuth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\TrashCanAuth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrashCanGifAuth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\TrashCanGifAuth.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGroundPasswrodRecoveryAssistent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackGroundPasswrodRecoveryAssistent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RestartGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\RestartGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconDefaultExitWelcomForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IconDefaultExitWelcomForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoadingGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\LoadingGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoSubscrtiption" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IcoSubscrtiption.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoOpenBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\IcoOpenBook.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowFemaleProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\ShowFemaleProfile.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowMaleProfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\ShowMaleProfile.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GifGears" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\GifGears.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GifBackForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\GifBackForm.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GifMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\GifMenu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowFemaleProfile_128X128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\ShowFemaleProfile 128X128.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowMaleProfile128X128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\ShowMaleProfile128X128.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BankDetails" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BankDetails.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BankDetailsCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BankDetailsCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CVVCode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\CVVCode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CVVCodeCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\CVVCodeCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BalanceUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BalanceUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BalanceUserCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BalanceUserCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RubSign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\RubSign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RubSignCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\RubSignCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuestionMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\QuestionMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuestionMarkCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\QuestionMarkCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BuySub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BuySub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BuySubCursored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\BuySubCursored.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GifBuySub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\GifBuySub.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmptySubUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\EmptySubUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Separator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\materials\Separator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

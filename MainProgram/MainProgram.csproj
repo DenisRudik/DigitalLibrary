@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F78F0E17-A369-4A67-8660-2737125973C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>online_library_for_educ_inst</RootNamespace>
+    <AssemblyName>Digital Desktop Library</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconForExe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.2.3.7\lib\net48\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountRecoveryWizardFormClass.cs" />
+    <Compile Include="Animation\Animation.cs" />
+    <Compile Include="Animation\Animator.cs" />
+    <Compile Include="AppOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppOptionsForm.Designer.cs">
+      <DependentUpon>AppOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppOptionsFormClass.cs" />
+    <Compile Include="AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorizationFormClass.cs" />
+    <Compile Include="ChooseRoleFormClass.cs" />
+    <Compile Include="ChooseRoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseRoleForm.Designer.cs">
+      <DependentUpon>ChooseRoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EgoldsCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FlatColors.cs" />
+    <Compile Include="FormGenreBookClass.cs" />
+    <Compile Include="FormSubcription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubcription.Designer.cs">
+      <DependentUpon>FormSubcription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubscriptionClass.cs" />
+    <Compile Include="LoadAccountFormClass.cs" />
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadAccountForm.Designer.cs">
+      <DependentUpon>LoadAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingFormClass.cs" />
+    <Compile Include="MainFormApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormApp.Designer.cs">
+      <DependentUpon>MainFormApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRecoveryWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountRecoveryWizardForm.Designer.cs">
+      <DependentUpon>AccountRecoveryWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormAppClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenreBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenreBook.Designer.cs">
+      <DependentUpon>FormGenreBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationFormClass.cs" />
+    <Compile Include="UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfoForm.Designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoFormClass.cs" />
+    <Compile Include="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeFormClass.cs" />
+    <EmbeddedResource Include="AppOptionsForm.resx">
+      <DependentUpon>AppOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseRoleForm.resx">
+      <DependentUpon>ChooseRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubcription.resx">
+      <DependentUpon>FormSubcription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadAccountForm.resx">
+      <DependentUpon>LoadAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormApp.resx">
+      <DependentUpon>MainFormApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountRecoveryWizardForm.resx">
+      <DependentUpon>AccountRecoveryWizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGenreBook.resx">
+      <DependentUpon>FormGenreBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGroundPasswrodRecoveryAssistent.jpg" />
+    <None Include="Resources\BackgroundGif.gif" />
+    <None Include="Resources\BackGround_Video.gif" />
+    <None Include="Resources\found_teacher_by_last_name 48x48.png" />
+    <None Include="bin\Debug\Sound_Confirmed.wav" />
+    <None Include="bin\Debug\Sound_Critical_Error.wav" />
+    <None Include="bin\Debug\Sound_For_message_box.wav" />
+    <None Include="bin\Debug\Sound_Warning.wav" />
+    <None Include="bin\Debug\Sound_Critical_Error_2.wav" />
+    <None Include="bin\Debug\Mystery_Magic.gif" />
+    <Content Include="IconForExe.ico" />
+    <None Include="materials\loading_screen %28png%29.png" />
+    <None Include="materials\who_to_use_app 96x96 %28png%29.png" />
+    <None Include="materials\icon_reader_person 48x48 %28png%29.png" />
+    <None Include="materials\icon_employee 48x48%28png%29.png" />
+    <None Include="materials\BackGround_ForM_Registration.jpg" />
+    <None Include="materials\books_on_shelf 96x96 %28png%29.png" />
+    <None Include="materials\icons-for-.exe-96x96 %28ico%29.ico" />
+    <None Include="materials\icon_document 48x48%28png%29.png" />
+    <None Include="materials\icon_user_data 48x48%28png%29.png" />
+    <None Include="materials\icon_mail 48x48%28png%29.png" />
+    <None Include="materials\icon_password 48x48%28png%29.png" />
+    <None Include="materials\icon_sex 48x48%28png%29.png" />
+    <None Include="materials\icon_show_password 40x40%28png%29.png" />
+    <None Include="materials\icon_hide_password 40x40%28png%29.png" />
+    <None Include="materials\icon_help 30x30.png" />
+    <None Include="materials\icon_add_secret_password 40x40.png" />
+    <None Include="materials\BackGround_Welcome_Form.jpg" />
+    <None Include="materials\BackGround_Authorization_Form.jpg" />
+    <None Include="materials\image_success 45x45 %28png%29.png" />
+    <None Include="materials\image_green_success 16x16 %28png%29.png" />
+    <None Include="materials\BackGround_Passwrod_Recovery_Assistent.jpg" />
+    <None Include="materials\icon_recovery_password 48x48%28png%29 .png" />
+    <None Include="materials\icon_welcome 256x256%28png%29.png" />
+    <None Include="materials\welcome 64x64%28png%29.png" />
+    <None Include="materials\icon_book 24x24%28png%29.png" />
+    <None Include="materials\icon_user 24x24%28png%29.png" />
+    <None Include="materials\icon_settings 24x24%28png%29.png" />
+    <None Include="materials\icon_exit 24x24%28png%29.png" />
+    <None Include="materials\icon_menu 24x24%28png%29.png" />
+    <None Include="materials\icon_menu 64x64%28png%29.png" />
+    <None Include="materials\icon_menu 32x32%28png%29.png" />
+    <None Include="materials\icon_close_app 256x256%28png%29.png" />
+    <None Include="materials\icon_reader_person 96x96 %28png%29.png" />
+    <None Include="materials\icon_count_download_book 32x32%28png%29.png" />
+    <None Include="materials\icon_last_download_book 32x32%28png%29.png" />
+    <None Include="materials\select_genre_book  64x64%28png%29.png" />
+    <None Include="materials\icon_select_book 64x64%28png%29.png" />
+    <None Include="materials\icon_settings 64x64%28png%29.png" />
+    <None Include="materials\database 256x256.png" />
+    <None Include="materials\IconDefaultExit.png" />
+    <None Include="materials\IconCursorExit.png" />
+    <None Include="materials\BookAdventure.png" />
+    <None Include="materials\BookContact.png" />
+    <None Include="materials\BookHistory.png" />
+    <None Include="materials\BookLaw.png" />
+    <None Include="materials\BookLove.png" />
+    <None Include="materials\BookMap.png" />
+    <None Include="materials\BookMark.png" />
+    <None Include="materials\BookMedicine.png" />
+    <None Include="materials\BookSimple.png" />
+    <None Include="materials\BookStrategy.png" />
+    <None Include="materials\BookDay.png" />
+    <None Include="materials\BookLogo.png" />
+    <None Include="materials\Books.png" />
+    <None Include="materials\BookSport.png" />
+    <None Include="materials\BuyBook.png" />
+    <None Include="materials\DigitalLibrary.png" />
+    <None Include="materials\LoveToBook.png" />
+    <None Include="materials\StackOfBooks.png" />
+    <None Include="materials\StudentWithBook.png" />
+    <None Include="materials\World.png" />
+    <None Include="materials\LicenseAgreementClicked.png" />
+    <None Include="materials\LicenseAgreementCursor.png" />
+    <None Include="materials\UserGif.gif" />
+    <None Include="materials\AdminGif.gif" />
+    <None Include="materials\BookLaptop 200x200.png" />
+    <None Include="materials\icons8-book.gif" />
+    <None Include="materials\LoadingScreen%28gif%29.gif" />
+    <None Include="materials\DocGif.gif" />
+    <None Include="materials\ExitAppGif.gif" />
+    <None Include="materials\BackgroundWelcomeForm.gif" />
+    <None Include="materials\ArrowBackCursor.png" />
+    <None Include="materials\ArrowBackDefault.png" />
+    <None Include="materials\WelcomeFormGif.gif" />
+    <None Include="materials\FormGif.gif" />
+    <None Include="materials\IconCursorAuth.png" />
+    <None Include="materials\IconDefaultAuth.png" />
+    <None Include="materials\IconCursorReg.png" />
+    <None Include="materials\IconDefaultReg.png" />
+    <None Include="materials\PictRegHidePass.png" />
+    <None Include="materials\PictRegNickName.png" />
+    <None Include="materials\PictRegPass.png" />
+    <None Include="materials\PictRegRecordBook.png" />
+    <None Include="materials\PictRegSecretPass.png" />
+    <None Include="materials\PictRegSex.png" />
+    <None Include="materials\PictRegShowPass.png" />
+    <None Include="materials\PictRegNickNameCursored.png" />
+    <None Include="materials\PictRegPassCursored.png" />
+    <None Include="materials\PictRegRecordBookCursored.png" />
+    <None Include="materials\PictRegSecretPassCursored.png" />
+    <None Include="materials\PictRegSexCursored.png" />
+    <None Include="materials\BackGroundAuthForm.jpg" />
+    <None Include="materials\PictAuthHidePass.png" />
+    <None Include="materials\PictAuthShowPass.png" />
+    <None Include="materials\TrashCan.png" />
+    <None Include="materials\TrashCanGif.gif" />
+    <None Include="materials\BackGroundFormReg.jpg" />
+    <None Include="materials\TrashCanAuth.png" />
+    <None Include="materials\TrashCanGifAuth.gif" />
+    <None Include="materials\RestartGif.gif" />
+    <None Include="materials\IconDefaultExitWelcomForm.png" />
+    <None Include="materials\LoadingGif.gif" />
+    <None Include="materials\IcoSubscrtiption.gif" />
+    <None Include="materials\IcoOpenBook.gif" />
+    <None Include="materials\ShowFemaleProfile.gif" />
+    <None Include="materials\ShowMaleProfile.gif" />
+    <None Include="materials\GifGears.gif" />
+    <None Include="materials\GifBackForm.gif" />
+    <None Include="materials\GifMenu.gif" />
+    <None Include="materials\ShowFemaleProfile 128X128.gif" />
+    <None Include="materials\ShowMaleProfile128X128.gif" />
+    <None Include="materials\BankDetails.png" />
+    <None Include="materials\BankDetailsCursored.png" />
+    <None Include="materials\CVVCode.png" />
+    <None Include="materials\CVVCodeCursored.png" />
+    <None Include="materials\BalanceUser.png" />
+    <None Include="materials\BalanceUserCursored.png" />
+    <None Include="materials\RubSign.png" />
+    <None Include="materials\RubSignCursored.png" />
+    <None Include="materials\IcoSubscrtiption 96x96.gif" />
+    <None Include="materials\QuestionMark.png" />
+    <None Include="materials\QuestionMarkCursored.png" />
+    <None Include="materials\BuySub.png" />
+    <None Include="materials\BuySubCursored.png" />
+    <None Include="materials\GifBuySub.gif" />
+    <None Include="materials\EmptySubUser.png" />
+    <None Include="materials\Separator.png" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\2997608.png" />
+    <None Include="Resources\123-1233273_data-icon-for-safe-data-exchange-digital-library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomLibraryClass\CustomLibraryClass.csproj">
+      <Project>{fce52872-442b-4c9c-bcef-bbca764f4872}</Project>
+      <Name>CustomLibraryClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Library - AnimatedModal\animatedModal\ModalForm\Modal.csproj">
+      <Project>{b1af30fe-9bcd-4d58-9e25-811cb3778d92}</Project>
+      <Name>Modal</Name>
+    </ProjectReference>
+    <ProjectReference Include="Library - CustomMessageBox\CustomMessageBox\CustomAlertBoxDemo\CustomAlertBox.csproj">
+      <Project>{19039ac1-ee08-460b-821b-0277442d04d1}</Project>
+      <Name>CustomAlertBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
