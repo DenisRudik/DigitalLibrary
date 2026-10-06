@@ -18,7 +18,7 @@
 
 - C#, .NET Framework, Windows Forms
 - [MetroFramework](https://github.com/thielj/MetroFramework) для оформления интерфейса
-- `<БД / хранилище данных, если есть>`
+- СУБД - MYSql 5.6 на локальном WEB-сервере Open Server Panel (OSPanel v.5.2.2) 
 
 ## 🗂 Структура решения
 
