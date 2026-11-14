@@ -358,22 +358,30 @@ namespace online_library_for_educ_inst
 
         public static async Task GetCheckPrimaryKeyUser(FmAuthorizationForm fmAuthorizationForm)
         {
-            using (MySqlConnection conn = new MySqlConnection(CustomClass.sConnStrToDB))
+            try
             {
-                await conn.OpenAsync();
-
-                MySqlCommand sql = new MySqlCommand("SELECT * FROM Users WHERE Pk_Зачётка = @PK_Зачётка", conn);
-                sql.Parameters.AddWithValue("@PK_Зачётка", fmAuthorizationForm.TxtRecordBook.Text);
-
-                using (MySqlDataReader reader = await sql.ExecuteReaderAsync())
+                using (MySqlConnection conn = new MySqlConnection(CustomClass.sConnStrToDB))
                 {
-                    if (!await reader.ReadAsync() && fmAuthorizationForm.TxtRecordBook.Text != "")
-                    {
-                        CustomClass.Alert("Пользователь с таким номером зачётки не найден!", Form_Alert.enmType.Error);
-                    }
-                }
+                    await conn.OpenAsync();
 
+                    MySqlCommand sql = new MySqlCommand("SELECT * FROM Users WHERE Pk_Зачётка = @PK_Зачётка", conn);
+                    sql.Parameters.AddWithValue("@PK_Зачётка", fmAuthorizationForm.TxtRecordBook.Text);
+
+                    using (MySqlDataReader reader = await sql.ExecuteReaderAsync())
+                    {
+                        if (!await reader.ReadAsync() && fmAuthorizationForm.TxtRecordBook.Text != "")
+                        {
+                            CustomClass.Alert("Пользователь с таким номером зачётки не найден!", Form_Alert.enmType.Error);
+                        }
+                    }
+
+                }
             }
+            catch(MySqlException)
+            {
+                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", Form_Alert.enmType.Error);
+            }
+            
         } /// Описание метода нахождения не существующего пользователя по номеру его зачетной книжки
 
         public static void GetCheckNumberCharacters(FmAuthorizationForm fmAuthorizationForm)
