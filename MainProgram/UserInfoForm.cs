@@ -1,6 +1,5 @@
 ﻿
 using System;
-using CustomLibraryClass;
 using CustomAlertBoxDemo;
 
 namespace online_library_for_educ_inst

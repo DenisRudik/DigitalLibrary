@@ -18,7 +18,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomAlertBoxDemo;
-using CustomLibraryClass;
 using MySqlConnector;
 
 namespace online_library_for_educ_inst

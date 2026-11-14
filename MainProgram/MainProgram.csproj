@@ -142,8 +142,18 @@
     <Compile Include="Controls\EgoldsCard.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomClass.cs" />
     <Compile Include="FlatColors.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormGenreBookClass.cs" />
+    <Compile Include="FormPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPassword.Designer.cs">
+      <DependentUpon>FormPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSubcription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +188,12 @@
       <DependentUpon>AccountRecoveryWizardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFormAppClass.cs" />
+    <Compile Include="modalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modalForm.Designer.cs">
+      <DependentUpon>modalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -221,6 +237,12 @@
     <EmbeddedResource Include="ChooseRoleForm.resx">
       <DependentUpon>ChooseRoleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPassword.resx">
+      <DependentUpon>FormPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSubcription.resx">
       <DependentUpon>FormSubcription.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountRecoveryWizardForm.resx">
       <DependentUpon>AccountRecoveryWizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modalForm.resx">
+      <DependentUpon>modalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -269,9 +294,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\database 256x256.png" />
+    <None Include="Resources\icon_close_app 256x256%28png%29.png" />
+    <None Include="Resources\FormGif.gif" />
+    <None Include="Resources\BackgroundModal1.gif" />
     <None Include="Resources\BackGroundPasswrodRecoveryAssistent.jpg" />
     <None Include="Resources\BackgroundGif.gif" />
-    <None Include="Resources\BackGround_Video.gif" />
     <None Include="Resources\found_teacher_by_last_name 48x48.png" />
     <None Include="bin\Debug\Sound_Confirmed.wav" />
     <None Include="bin\Debug\Sound_Critical_Error.wav" />
@@ -346,7 +374,6 @@
     <None Include="materials\UserGif.gif" />
     <None Include="materials\AdminGif.gif" />
     <None Include="materials\BookLaptop 200x200.png" />
-    <None Include="materials\icons8-book.gif" />
     <None Include="materials\LoadingScreen%28gif%29.gif" />
     <None Include="materials\DocGif.gif" />
     <None Include="materials\ExitAppGif.gif" />
@@ -399,7 +426,6 @@
     <None Include="materials\BalanceUserCursored.png" />
     <None Include="materials\RubSign.png" />
     <None Include="materials\RubSignCursored.png" />
-    <None Include="materials\IcoSubscrtiption 96x96.gif" />
     <None Include="materials\QuestionMark.png" />
     <None Include="materials\QuestionMarkCursored.png" />
     <None Include="materials\BuySub.png" />
@@ -412,14 +438,6 @@
     <None Include="Resources\123-1233273_data-icon-for-safe-data-exchange-digital-library.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomLibraryClass\CustomLibraryClass.csproj">
-      <Project>{fce52872-442b-4c9c-bcef-bbca764f4872}</Project>
-      <Name>CustomLibraryClass</Name>
-    </ProjectReference>
-    <ProjectReference Include="Library - AnimatedModal\animatedModal\ModalForm\Modal.csproj">
-      <Project>{b1af30fe-9bcd-4d58-9e25-811cb3778d92}</Project>
-      <Name>Modal</Name>
-    </ProjectReference>
     <ProjectReference Include="Library - CustomMessageBox\CustomMessageBox\CustomAlertBoxDemo\CustomAlertBox.csproj">
       <Project>{19039ac1-ee08-460b-821b-0277442d04d1}</Project>
       <Name>CustomAlertBox</Name>

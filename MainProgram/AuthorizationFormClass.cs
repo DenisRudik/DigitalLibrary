@@ -17,7 +17,6 @@ using System.Security.Cryptography;
 using System.Text;
 using MySqlConnector;
 using CustomAlertBoxDemo;
-using CustomLibraryClass;
 
 
 namespace online_library_for_educ_inst

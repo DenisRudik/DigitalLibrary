@@ -11,6 +11,19 @@ namespace modal
             InitializeComponent();
         }
         public static int parentX, parentY;
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.ClientSize = new System.Drawing.Size(615, 385);
+            this.Name = "Form1";
+            this.ResumeLayout(false);
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form modalBackground = new Form();

@@ -2,8 +2,6 @@
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Text;
-using CustomLibraryClass;
-using modal;
 using CustomAlertBoxDemo;
 using System.Threading;
 using System.Drawing.Drawing2D;

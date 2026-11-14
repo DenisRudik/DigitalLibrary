@@ -10,7 +10,6 @@
 /// <param name="FmUserInfoForm"></param>
 /// 
 using System.Drawing;
-using CustomLibraryClass;
 
 
 namespace online_library_for_educ_inst

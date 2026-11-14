@@ -479,6 +479,8 @@ namespace online_library_for_educ_inst.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+
         
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
@@ -559,6 +561,8 @@ namespace online_library_for_educ_inst.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+
         
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.

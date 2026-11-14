@@ -4,7 +4,6 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Diagnostics;
 using CustomAlertBoxDemo;
-using CustomLibraryClass;
 using System.Drawing.Drawing2D;
 using online_library_for_educ_inst;
 
@@ -115,7 +114,7 @@ namespace modal
 
             if (CustomClass.isOpenedChooseRoleForm)
             {
-                PictMainLogo.Image = Properties.Resources.FormGif;
+                PictMainLogo.Image = online_library_for_educ_inst.Properties.Resources.DigitalLibrary;
             }
 
             if (MChckBoxConfirmReadLicenseAgreement.Checked)
@@ -125,13 +124,13 @@ namespace modal
 
             if (CustomClass.bUserWantCloseApp)
             {
-               PictMainLogo.Image = Properties.Resources.icon_close_app_256x256_png_;
-               PictMainLogo.BackgroundImage= Properties.Resources.icon_close_app_256x256_png_;
+               PictMainLogo.Image = online_library_for_educ_inst.Properties.Resources.icon_close_app_256x256_png_;
+               PictMainLogo.BackgroundImage= online_library_for_educ_inst.Properties.Resources.icon_close_app_256x256_png_;
             }
 
             if (CustomClass.isLoadAdminRole) 
             {
-                PictMainLogo.Image = Properties.Resources.database_256x256;
+                //PictMainLogo.Image = online_library_for_educ_inst.Properties.Resources.database_256x256; админка не реализована
                 TLoadAccessProcess_Timer.Enabled = true;       
             }
 

@@ -15,27 +15,27 @@ namespace online_library_for_educ_inst
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FmLoadingForm());
 
-            if (CustomLibraryClass.CustomClass.isOpenedChooseRoleForm)
+            if (CustomClass.isOpenedChooseRoleForm)
             {
                 Application.Run(new FmChooseRoleForm());
             }
 
-            if (CustomLibraryClass.CustomClass.isOpenedWelcomeForm)
+            if (CustomClass.isOpenedWelcomeForm)
             {
                 Application.Run(new FmWelcomeForm());
             }
 
-            if (CustomLibraryClass.CustomClass.isOpenedFormRegistration)
+            if (CustomClass.isOpenedFormRegistration)
             {
                 Application.Run(new FmRegistrationForm());
             }
             
-            if (CustomLibraryClass.CustomClass.isCompleteAuthorization)
+            if (CustomClass.isCompleteAuthorization)
             {
                 Application.Run(new FmLoadAccountForm());
             }
 
-            if(CustomLibraryClass.CustomClass.isLoadAccount)
+            if(CustomClass.isLoadAccount)
             {
                 Application.Run(new FmMainFormApp());
                 

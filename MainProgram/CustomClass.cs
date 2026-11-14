@@ -22,8 +22,7 @@ using static CustomAlertBoxDemo.Form_Alert;
 
 
 
-namespace CustomLibraryClass
-{
+
     public class CustomClass
     {
 
@@ -310,5 +309,5 @@ namespace CustomLibraryClass
             }
         } /// Описание асинхронного метода для подлючения к локальной БД
     }
-}
+
 

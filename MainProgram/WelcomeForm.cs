@@ -2,8 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using CustomAlertBoxDemo;
-using CustomLibraryClass;
-
 
 namespace online_library_for_educ_inst
 {   
