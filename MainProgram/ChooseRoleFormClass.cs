@@ -25,32 +25,32 @@ namespace online_library_for_educ_inst
 
         public static void GetActivatedTransparentComponent(FmChooseRoleForm fmChooseRoleForm)
         {
-            fmChooseRoleForm.LblMainText.Parent = fmChooseRoleForm.PictBackgroundGif;
+            //fmChooseRoleForm.LblMainText.Parent = fmChooseRoleForm.PictBackgroundGif;
             // Make your label transparent
             fmChooseRoleForm.LblMainText.BackColor = Color.Transparent;
 
-            fmChooseRoleForm.LblSubText.Parent = fmChooseRoleForm.PictBackgroundGif;
+            //fmChooseRoleForm.LblSubText.Parent = fmChooseRoleForm.PictBackgroundGif;
 
             fmChooseRoleForm.LblSubText.BackColor = Color.Transparent;
 
-            fmChooseRoleForm.PictExitApp.Parent = fmChooseRoleForm.PictBackgroundGif;
+           // fmChooseRoleForm.PictExitApp.Parent = fmChooseRoleForm.PictBackgroundGif;
             // Make PictureBox transparent
 
             fmChooseRoleForm.PictExitApp.BackColor = Color.Transparent;
 
-            fmChooseRoleForm.Picture.Parent = fmChooseRoleForm.PictBackgroundGif;
+           // fmChooseRoleForm.Picture.Parent = fmChooseRoleForm.PictBackgroundGif;
 
             fmChooseRoleForm.Picture.BackColor = Color.Transparent;
 
-            fmChooseRoleForm.PictLicense.Parent = fmChooseRoleForm.PictBackgroundGif;
+            //fmChooseRoleForm.PictLicense.Parent = fmChooseRoleForm.PictBackgroundGif;
 
             fmChooseRoleForm.PictLicense.BackColor = Color.Transparent;
 
-            fmChooseRoleForm.PictUserIcon.Parent = fmChooseRoleForm.PictBackgroundGif;
+           // fmChooseRoleForm.PictUserIcon.Parent = fmChooseRoleForm.PictBackgroundGif;
 
             fmChooseRoleForm.PictUserIcon.BackColor = Color.Transparent;
 
-            fmChooseRoleForm.PictAdminIcon.Parent = fmChooseRoleForm.PictBackgroundGif;
+            //fmChooseRoleForm.PictAdminIcon.Parent = fmChooseRoleForm.PictBackgroundGif;
 
             fmChooseRoleForm.PictAdminIcon.BackColor = Color.Transparent;
         } // Присвоение всем компонентам на форме эффекта прозрачности

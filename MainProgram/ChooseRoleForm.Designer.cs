@@ -47,7 +47,6 @@
             this.PictLicense = new System.Windows.Forms.PictureBox();
             this.Picture = new System.Windows.Forms.PictureBox();
             this.PictExitApp = new System.Windows.Forms.PictureBox();
-            this.PictBackgroundGif = new System.Windows.Forms.PictureBox();
             this.ComponentTile = new MetroFramework.Controls.MetroTile();
             this.PanelFirstSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictAdminIcon)).BeginInit();
@@ -55,7 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictLicense)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictExitApp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBackgroundGif)).BeginInit();
             this.SuspendLayout();
             // 
             // LblMainText
@@ -244,18 +242,6 @@
             this.PictExitApp.MouseEnter += new System.EventHandler(this.ExitApp_MouseEnter);
             this.PictExitApp.MouseLeave += new System.EventHandler(this.ExitApp_MouseLeave);
             // 
-            // PictBackgroundGif
-            // 
-            this.PictBackgroundGif.BackColor = System.Drawing.Color.Transparent;
-            this.PictBackgroundGif.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PictBackgroundGif.Image = global::online_library_for_educ_inst.Properties.Resources.BackgroundGif;
-            this.PictBackgroundGif.Location = new System.Drawing.Point(-1, 23);
-            this.PictBackgroundGif.Name = "PictBackgroundGif";
-            this.PictBackgroundGif.Size = new System.Drawing.Size(1441, 686);
-            this.PictBackgroundGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictBackgroundGif.TabIndex = 0;
-            this.PictBackgroundGif.TabStop = false;
-            // 
             // ComponentTile
             // 
             this.ComponentTile.Dock = System.Windows.Forms.DockStyle.Top;
@@ -284,7 +270,6 @@
             this.Controls.Add(this.LblMainText);
             this.Controls.Add(this.ComponentTile);
             this.Controls.Add(this.PictExitApp);
-            this.Controls.Add(this.PictBackgroundGif);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FmChooseRoleForm";
@@ -295,6 +280,8 @@
             this.Activated += new System.EventHandler(this.FmChooseRoleForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FmChooseRoleForm_FormClosed);
             this.Load += new System.EventHandler(this.FmChooseRoleForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FmChooseRoleForm_Paint);
+            this.Resize += new System.EventHandler(this.FmChooseRoleForm_Resize);
             this.PanelFirstSide.ResumeLayout(false);
             this.PanelFirstSide.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictAdminIcon)).EndInit();
@@ -302,7 +289,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictLicense)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictExitApp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBackgroundGif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +312,6 @@
         public System.Windows.Forms.Label LblUserText;
         public System.Windows.Forms.Label LblAdminText;
         public System.Windows.Forms.Timer TimerToAnimationForm;
-        public System.Windows.Forms.PictureBox PictBackgroundGif;
         public MetroFramework.Controls.MetroTile ComponentTile;
     }
 }
