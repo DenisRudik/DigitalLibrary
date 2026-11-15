@@ -25,7 +25,7 @@ namespace yt_DesignUI
 
             await CustomClass.GetConnToDBAsync(CustomClass.sConnStrToDB, true);
 
-            await FormSubscriptionClass.GetDataSubscription(this);
+            await FormSubscriptionClass.GetDataSubscription(this);       
         }
 
         private void TimerToAnimationForm_Tick(object sender, EventArgs e)
