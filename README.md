@@ -20,22 +20,28 @@
 - [MetroFramework](https://github.com/thielj/MetroFramework) для оформления интерфейса
 - СУБД - MYSql 5.6 на локальном WEB-сервере Open Server Panel (OSPanel v.5.2.2) 
 
-## 🗂 Структура решения
+## 📁 Структура решения
 
 ```
 Project-Digital Library.sln
-├── MainProgram/                 # Основное приложение (WinForms)
-│   ├── *Form.cs                 # Формы: авторизация, регистрация, главное окно,
-│   │                            #   жанры, подписка, профиль, настройки и др.
-│   ├── *FormClass.cs            # Логика, отделённая от интерфейса формы
-│   ├── Animation/               # Классы анимации интерфейса
-│   ├── Controls/                # Пользовательские элементы (EgoldsCard)
-│   ├── Library - AnimatedCards/ # Сторонняя библиотека анимированных карточек
-│   ├── Library - AnimatedModal/ # Сторонняя библиотека модальных окон
-│   ├── Library - CustomMessageBox/ # Сторонняя библиотека кастомных уведомлений
-│   └── materials/               # Вспомогательные ресурсы (BadWords.txt)
-├── ClassForMainFormApp/         # Библиотека классов для главной формы
-└── CustomLibraryClass/          # Библиотека общих пользовательских классов
+└── MainProgram/                 # Основное приложение (WinForms)
+    ├── *Form.cs                 # Формы: авторизация, регистрация, выбор роли,
+    │                            #   главное окно, жанры, подписка, профиль,
+    │                            #   настройки, восстановление аккаунта и др.
+    ├── *FormClass.cs            # Логика, отделённая от интерфейса формы
+    ├── Animation/               # Классы анимации интерфейса
+    ├── Controls/                # Пользовательские элементы (EgoldsCard)
+    ├── Resources/               # Изображения, GIF-анимации и иконки (Resources.resx)
+    ├── materials/               # Вспомогательные ресурсы (BadWords.txt)
+    ├── FormUsrAlert.cs          # Кастомное окно уведомлений
+    ├── CustomClass.cs           # Общие пользовательские классы
+    ├── FlatColors.cs            # Цветовая палитра интерфейса
+    ├── Program.cs               # Точка входа в приложение
+    ├── App.config               # Конфигурация приложения
+    ├── packages.config          # Зависимости NuGet
+    ├── ClassDiagram1.cd         # Диаграмма классов
+    ├── MetroFramework.txt       # Информация о библиотеке MetroFramework
+    └── IconForExe.ico           # Иконка приложения
 ```
 
 В проекте логика каждой формы вынесена в отдельный класс (`*FormClass.cs`), а код интерфейса остаётся в самой форме.
