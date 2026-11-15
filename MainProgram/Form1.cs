@@ -2,8 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace modal
-{
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -27,7 +26,7 @@ namespace modal
         private void button1_Click(object sender, EventArgs e)
         {
             Form modalBackground = new Form();
-            using (FrmModalForm modal = new FrmModalForm()) {
+            using (FormUsrAlert modal = new FormUsrAlert()) {
 
                 modalBackground.StartPosition = FormStartPosition.Manual;
                 modalBackground.FormBorderStyle = FormBorderStyle.None;
@@ -49,4 +48,4 @@ namespace modal
             }
         }
     }
-}
+

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using CustomAlertBoxDemo;
 
 namespace online_library_for_educ_inst
 {
@@ -12,13 +11,13 @@ namespace online_library_for_educ_inst
 
             CustomClass.bSidebarStretch = true;
 
-            MainFormAppClass.GetPictureLogoLocation(this);   
+            MainFormAppClass.GetPictureLogoLocation(this);
         }
 
         private void MainFormApp_Load(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundStartApp.ToString());
-
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundStartApp.ToString());
+            
             CustomClass.bSidebarStretch = false;
 
             CustomClass.isOpenedChooseRoleForm = false;
@@ -62,12 +61,12 @@ namespace online_library_for_educ_inst
         {
             MainFormAppClass.CallAnimationSideBar(this);
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         }
 
         private void MenuBtn_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             MainFormAppClass.CallOnMouseEnterMenuBtn(this); 
 
@@ -77,7 +76,7 @@ namespace online_library_for_educ_inst
         {
             MainFormAppClass.CallFormAvailableSub(this);    
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         }
 
         private void BtnOpenBooks_MouseEnter(object sender, EventArgs e)
@@ -122,7 +121,7 @@ namespace online_library_for_educ_inst
 
         private void BtnShowSub_Click(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             MainFormAppClass.GetCheckSubscriptionUser(this);
         }

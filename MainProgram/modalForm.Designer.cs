@@ -1,6 +1,5 @@
 ﻿
-namespace modal
-{
+
     partial class FrmModalForm
     {
         /// <summary>
@@ -303,4 +302,3 @@ namespace modal
         private MetroFramework.Controls.MetroTile LowerComponentTile;
         private MetroFramework.Controls.MetroButton BtnBuySub;
     }
-}

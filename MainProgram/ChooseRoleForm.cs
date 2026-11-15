@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using CustomAlertBoxDemo;
 
 
 namespace online_library_for_educ_inst
@@ -26,7 +25,7 @@ namespace online_library_for_educ_inst
 
             ChooseRoleFormClass.GetAnimatedPanel(this);
             
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundFormOpen.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundFormOpen.ToString());
 
             ChooseRoleFormClass.CallWelcomeMessage(this);
         }
@@ -61,14 +60,14 @@ namespace online_library_for_educ_inst
 
         private void ExitApp_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             PictExitApp.Image = Properties.Resources.IconCursorExit;
             ToolTipHelpUser.SetToolTip(PictExitApp, "Выйти из приложения");
         }
 
         private void PictLicense_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             PictLicense.Image = Properties.Resources.LicenseAgreementClicked;
             ToolTipHelpUser.SetToolTip(PictLicense, "Лицензионное соглашение с конечным пользователем");
         }
@@ -80,7 +79,7 @@ namespace online_library_for_educ_inst
 
         private void LblUserText_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             LblUserText.ForeColor = Color.FromArgb(0, 174, 219);
             ToolTipHelpUser.SetToolTip(LblUserText, "Войти в приложение как пользователь");
         }
@@ -92,7 +91,7 @@ namespace online_library_for_educ_inst
 
         private void LblAdminText_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             LblAdminText.ForeColor = Color.FromArgb(0, 174, 219);
             ToolTipHelpUser.SetToolTip(LblAdminText, "Войти в приложение как администратор");
         }
@@ -106,7 +105,7 @@ namespace online_library_for_educ_inst
 
             LblAdminText.ForeColor = Color.Aqua;
 
-            CustomClass.Alert("В процессе разработки!",Form_Alert.enmType.Warning);
+            CustomClass.Alert("В процессе разработки!",FormUsrAlert.enmType.Warning);
         }
 
         private void LblUserText_Click(object sender, EventArgs e)

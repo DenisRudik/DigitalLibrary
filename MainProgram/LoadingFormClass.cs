@@ -13,7 +13,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
-using CustomAlertBoxDemo;
 
 
 namespace online_library_for_educ_inst
@@ -29,7 +28,7 @@ namespace online_library_for_educ_inst
             fmLoadingForm.MaximumSize = new Size(750, 450);
             fmLoadingForm.MinimumSize = new Size(750, 450);
             fmLoadingForm.ControlBox = false;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundStartApp.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundStartApp.ToString());
             fmLoadingForm.PictBxPictrurePC.Image = Properties.Resources.loading_screen__png_;
         }
 
@@ -85,7 +84,7 @@ namespace online_library_for_educ_inst
                 case 750:
                     fmLoadingForm.TmTimeToLoad.Enabled = false;
                     fmLoadingForm.TmTimeToLoad.Stop();
-                    CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClose.ToString());
+                    CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClose.ToString());
                     CustomClass.CallAnimationCloseForm(fmLoadingForm);
                     CustomClass.isOpenedChooseRoleForm = true;
                     break;

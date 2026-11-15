@@ -4,11 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
 using System.IO;
-using CustomAlertBoxDemo.Properties;
 
-namespace CustomAlertBoxDemo
-{
-    public partial class Form_Alert : Form
+    public partial class FormUsrAlert : Form
     {
         private static SoundPlayer soundPlayer; /// поле для воспроизведение звуковых эффектов. Определена в директиве 
                                                 ///System.Media  
@@ -34,7 +31,7 @@ namespace CustomAlertBoxDemo
             }
         }
 
-        public Form_Alert()
+        public FormUsrAlert()
         {
             InitializeComponent();
         }
@@ -69,7 +66,7 @@ namespace CustomAlertBoxDemo
         }///тип, перечисляющий виды сообщений для пользователя
 
 
-        private Form_Alert.enmAction action;
+        private FormUsrAlert.enmAction action;
 
         private int x, y;
         private void timer1_Tick(object sender, EventArgs e)
@@ -123,7 +120,7 @@ namespace CustomAlertBoxDemo
             for (int i = 1; i < 10; i++)
             {
                 fname = "alert" + i.ToString();
-                Form_Alert frm = (Form_Alert)Application.OpenForms[fname];
+                FormUsrAlert frm = (FormUsrAlert)Application.OpenForms[fname];
 
                 if (frm == null)
                 {
@@ -142,26 +139,26 @@ namespace CustomAlertBoxDemo
             {
                 case enmType.Success:
                     Text = "Успешно!";
-                    this.pictureBox1.Image = Resources.success;
+                    this.pictureBox1.Image = online_library_for_educ_inst.Properties.Resources.success;
                     this.BackColor = SystemColors.Highlight;
                     SoundPlayer = new SoundPlayer(fullPathToSound + enmNamesOfSoundProject.Sound_Confirmed + ".wav");
 
                     break;
                 case enmType.Error:
                     Text = "Критическая ошибка!";
-                    this.pictureBox1.Image = Resources.error;
+                    this.pictureBox1.Image = online_library_for_educ_inst.Properties.Resources.error;
                     this.BackColor = Color.DarkRed;
                     SoundPlayer = new SoundPlayer(fullPathToSound + enmNamesOfSoundProject.Sound_Critical_Error_2 + ".wav");
                     break;
                 case enmType.Info:
                     Text = "Информация";
-                    this.pictureBox1.Image = Resources.info;
+                    this.pictureBox1.Image = online_library_for_educ_inst.Properties.Resources.info;
                     this.BackColor = Color.RoyalBlue;
                     SoundPlayer = new SoundPlayer(fullPathToSound + enmNamesOfSoundProject.Sound_Attention + ".wav");
                     break;
                 case enmType.Warning:
                     Text = "Внимание!";
-                    this.pictureBox1.Image = Resources.warning;
+                    this.pictureBox1.Image = online_library_for_educ_inst.Properties.Resources.warning;
                     this.BackColor = Color.DarkOrange;
                     SoundPlayer = new SoundPlayer(fullPathToSound + enmNamesOfSoundProject.Sound_For_Message_Box + ".wav");
                     break; 
@@ -176,4 +173,6 @@ namespace CustomAlertBoxDemo
             this.timer1.Start();
         }
     }
-}
+
+
+

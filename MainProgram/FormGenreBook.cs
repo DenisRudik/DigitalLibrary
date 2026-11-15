@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using CustomAlertBoxDemo;
 
 namespace online_library_for_educ_inst
 {
@@ -15,7 +14,7 @@ namespace online_library_for_educ_inst
 
         private async void SelectBookForm_Load(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundFormOpen.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundFormOpen.ToString());
 
             CustomClass.GetRoundedShapeForm(this);
 

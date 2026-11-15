@@ -12,7 +12,6 @@
 
 using System.Drawing;
 using System.Threading.Tasks;
-using CustomAlertBoxDemo;
 using MySqlConnector;
 
 namespace online_library_for_educ_inst
@@ -124,37 +123,37 @@ namespace online_library_for_educ_inst
         public static void CallOnMouseEntermComBoxGenreNovel(FmFormGenreBook fmFormGenreBook)
         {
             fmFormGenreBook.LblForNovel.ForeColor = Color.Chartreuse;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEntermComBoxGenrePoem(FmFormGenreBook fmFormGenreBook)
         {
             fmFormGenreBook.LblForPoem.ForeColor = Color.Chartreuse;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEntermComBoxGenreStory(FmFormGenreBook fmFormGenreBook)
         {
             fmFormGenreBook.LblForStory.ForeColor = Color.Chartreuse;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEntermComBoxGenreHorrors(FmFormGenreBook fmFormGenreBook)
         {
             fmFormGenreBook.LblForHorrors.ForeColor = Color.Chartreuse;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEntermComBoxGenreBooks(FmFormGenreBook fmFormGenreBook)
         {
             fmFormGenreBook.LblForBooks.ForeColor = Color.Chartreuse;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEntermComBoxGenreArticle(FmFormGenreBook fmFormGenreBook)
         {
             fmFormGenreBook.LblForArticle.ForeColor = Color.Chartreuse;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
 
@@ -294,7 +293,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Властелин_колец.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Властелин колец ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Властелин колец ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
 
             if (fmFormGenreBook.mComBoxGenreNovel.SelectedIndex == 1)
@@ -311,7 +310,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Три_мушкетера.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Три мушкетера ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Три мушкетера ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
         } /// Осуществеление записи в базу данных конкретной книги в жанре "роман" которую выбрал пользователь для чтения. В дальнейшем это информация отображается в личном кабинете
 
@@ -331,7 +330,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Мертвые_души.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Мертвые души ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Мертвые души ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
 
             if (fmFormGenreBook.mComBoxGenrePoem.SelectedIndex == 1)
@@ -348,7 +347,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Руслан_и_людмила.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Руслан и Людмила ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Руслан и Людмила ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
         } /// Осуществеление записи в базу данных конкретной книги в жанре "поэма" которую выбрал пользователь для чтения. В дальнейшем это информация отображается в личном кабинете
 
@@ -368,7 +367,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Хоббит.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Хоббит ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Хоббит ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
 
             if (fmFormGenreBook.mComBoxGenreStory.SelectedIndex == 1)
@@ -385,7 +384,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Гарри_поттер.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Гарри Поттер ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Гарри Поттер ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
         } /// Осуществеление записи в базу данных конкретной книги в жанре "фэнтези" которую выбрал пользователь для чтения. В дальнейшем это информация отображается в личном кабинете
 
@@ -405,7 +404,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Оно.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Оно ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Оно ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
 
             if (fmFormGenreBook.mComBoxGenreHorrors.SelectedIndex == 1)
@@ -422,7 +421,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Сияние.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Сияние ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Сияние ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
         } /// Осуществеление записи в базу данных конкретной книги в жанре "ужасы" которую выбрал пользователь для чтения. В дальнейшем это информация отображается в личном кабинете
 
@@ -442,7 +441,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "Python.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", "Основы языка Python ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", "Основы языка Python ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
 
             if (fmFormGenreBook.mComBoxGenreBooks.SelectedIndex == 1)
@@ -459,7 +458,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "С++.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", "Основы языка С++ ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", "Основы языка С++ ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
         } /// Осуществеление записи в базу данных конкретной книги в жанре "научная литература" которую выбрал пользователь для чтения. В дальнейшем это информация отображается в личном кабинете
 
@@ -479,7 +478,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "С#.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", "Основы языка С# ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", "Основы языка С# ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
 
             if (fmFormGenreBook.mComBoxGenreArticle.SelectedIndex == 1)
@@ -496,7 +495,7 @@ namespace online_library_for_educ_inst
 
                 string path = CustomClass.fullPathToBook + "ООП.pdf";
                 System.Diagnostics.Process.Start(path);
-                CustomClass.Alert("Файл " + string.Format("({0})", " Основы ООП ") + " открыт для чтения и скачивания!", Form_Alert.enmType.Success);
+                CustomClass.Alert("Файл " + string.Format("({0})", " Основы ООП ") + " открыт для чтения и скачивания!", FormUsrAlert.enmType.Success);
             }
         } /// Осуществеление записи в базу данных конкретной книги в жанре "научная статья" которую выбрал пользователь для чтения. В дальнейшем это информация отображается в личном кабинете
 

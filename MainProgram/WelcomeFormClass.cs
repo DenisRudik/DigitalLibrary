@@ -13,8 +13,6 @@ using System;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CustomAlertBoxDemo;
-using modal;
 
 
 namespace online_library_for_educ_inst
@@ -101,7 +99,7 @@ namespace online_library_for_educ_inst
         {
             try
             {
-                CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+                CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
                 Form modalBackground = new Form();
                 using (FrmModalForm modal = new FrmModalForm())
                 {
@@ -135,13 +133,13 @@ namespace online_library_for_educ_inst
 
             catch
             {
-                CustomClass.Alert("Критическая ошибка в системе!", Form_Alert.enmType.Warning);
+                CustomClass.Alert("Критическая ошибка в системе!", FormUsrAlert.enmType.Warning);
             }
         } /// Вызов приветсвеннной формы 
 
         public static void CallExitApplicaton(FmWelcomeForm fmWelcomeForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             CustomClass.bUserWantCloseApp = true;
             Form modalBackground = new Form();
             using (FrmModalForm modal = new FrmModalForm())
@@ -183,7 +181,7 @@ namespace online_library_for_educ_inst
         {
             int parentX, parentY;
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             CustomClass.bBtnGoToAuthorizationFormClicked = true;
             Form modalBackground = new Form();
             using (FmAuthorizationForm authorization_Form = new FmAuthorizationForm())
@@ -211,7 +209,7 @@ namespace online_library_for_educ_inst
         {
             int parentX, parentY;
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             Form modalBackground = new Form();
             using (FmRegistrationForm registration_Form = new FmRegistrationForm())
             {

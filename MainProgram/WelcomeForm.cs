@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using CustomAlertBoxDemo;
 
 namespace online_library_for_educ_inst
 {   
@@ -27,7 +26,7 @@ namespace online_library_for_educ_inst
 
             WelcomeFormClass.CallAnimatedDrawText(this);
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundFormOpen.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundFormOpen.ToString());
               
         }
 
@@ -39,7 +38,7 @@ namespace online_library_for_educ_inst
 
         private void PictBackToChoose_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             PictBackToChoose.Image = Properties.Resources.ArrowBackCursor;
             ToolTipHelpUser.SetToolTip(PictBackToChoose, "Вернутся в приветсвенное окно");
         }
@@ -56,7 +55,7 @@ namespace online_library_for_educ_inst
 
         private void PictExitApp_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             PictExitApp.Image = Properties.Resources.IconCursorExit;
             ToolTipHelpUser.SetToolTip(PictExitApp, "Выйти из приложения");
         }
@@ -73,7 +72,7 @@ namespace online_library_for_educ_inst
 
         private void PictBtnAuthorization_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             PictBtnAuthorization.Image = Properties.Resources.IconCursorAuth;
             LblSubText.ForeColor = Color.DarkGreen;
             ToolTipHelpUser.SetToolTip(PictBtnAuthorization, "Перейти к форме авторизации");
@@ -93,7 +92,7 @@ namespace online_library_for_educ_inst
 
         private void PictBtnReg_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             PictBtnReg.Image = Properties.Resources.IconCursorReg;
             LblNewSubText.ForeColor = Color.DarkGreen;
             ToolTipHelpUser.SetToolTip(PictBtnReg, "Перейти к форме регистрации");
@@ -121,7 +120,7 @@ namespace online_library_for_educ_inst
 
             if (CustomClass.isCompleteAuthorization)
             {
-                CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClose.ToString());
+                CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClose.ToString());
             }
         }
     }

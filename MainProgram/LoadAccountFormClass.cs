@@ -13,7 +13,6 @@
 using System;
 using System.Drawing;
 using System.Threading;
-using CustomAlertBoxDemo;
 
 namespace online_library_for_educ_inst
 {
@@ -57,7 +56,7 @@ namespace online_library_for_educ_inst
                     fmLoadAccountForm.Tload.Enabled = false;
                     fmLoadAccountForm.Tload.Stop();
                     CustomClass.CallAnimationCloseForm(fmLoadAccountForm);
-                    CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClose.ToString());
+                    CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClose.ToString());
                     CustomClass.isLoadAccount = true;
                     break;
             }
@@ -66,7 +65,7 @@ namespace online_library_for_educ_inst
         public static void CallMainFormApplication(FmLoadAccountForm fmLoadAccountForm)
         {
             
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundStartApp.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundStartApp.ToString()); 
 
             string sUserNickname = CustomClass.sNickNameNewUser;
 

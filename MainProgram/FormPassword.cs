@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Text;
-using CustomAlertBoxDemo;
 using System.Threading;
 using System.Drawing.Drawing2D;
 using System.Drawing;
@@ -53,7 +52,7 @@ namespace online_library_for_educ_inst
         {
             if (string.IsNullOrEmpty(TxtPass.Text))
             {
-                CustomClass.Alert("Не заполнены необходимые данные!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Не заполнены необходимые данные!", FormUsrAlert.enmType.Error);
             }
         }
 
@@ -66,7 +65,7 @@ namespace online_library_for_educ_inst
             {
                 if (sPasswordFromTxt != sPasswordHashFromDB)
                 {
-                    CustomClass.Alert("Не верный пароль для данного номера зачётки!.Учтите его регистр", Form_Alert.enmType.Info);
+                    CustomClass.Alert("Не верный пароль для данного номера зачётки!.Учтите его регистр", FormUsrAlert.enmType.Info);
                 }
                 else if (sPasswordFromTxt == sPasswordHashFromDB)
                 {

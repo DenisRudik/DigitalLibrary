@@ -12,7 +12,6 @@
 
 
 using WMPLib;
-using CustomAlertBoxDemo;
 
 
 namespace online_library_for_educ_inst
@@ -25,7 +24,7 @@ namespace online_library_for_educ_inst
 
         public static void CallShowNotificationMessage(FmAppOptionsForm fmAppOptionsForm)
         {
-            CustomClass.Alert("Настройки приложения", Form_Alert.enmType.Warning);
+            CustomClass.Alert("Настройки приложения", FormUsrAlert.enmType.Warning);
         }
 
 
@@ -39,14 +38,14 @@ namespace online_library_for_educ_inst
             if (fmAppOptionsForm.MToggleSoundOptions.Checked)
             {
                 WMP.settings.volume = 50;
-                CustomClass.Alert("Звуковые эффекты включены!", Form_Alert.enmType.Info);
+                CustomClass.Alert("Звуковые эффекты включены!", FormUsrAlert.enmType.Info);
 
                 fmAppOptionsForm.LblMessageForSound.Text = "Выключить звуковые эффекты";
             }
             else
             {
                 WMP.settings.volume = 0;
-                CustomClass.Alert("Звуковые эффекты выключены!", Form_Alert.enmType.Info);
+                CustomClass.Alert("Звуковые эффекты выключены!", FormUsrAlert.enmType.Info);
                 fmAppOptionsForm.LblMessageForSound.Text = "Включить звуковые эффекты";
             }
         }

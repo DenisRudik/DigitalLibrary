@@ -463,6 +463,16 @@ namespace online_library_for_educ_inst.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap error {
+            get {
+                object obj = ResourceManager.GetObject("error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap ExitAppGif {
             get {
                 object obj = ResourceManager.GetObject("ExitAppGif", resourceCulture);
@@ -479,8 +489,6 @@ namespace online_library_for_educ_inst.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-
         
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
@@ -561,8 +569,6 @@ namespace online_library_for_educ_inst.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-
         
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
@@ -847,6 +853,16 @@ namespace online_library_for_educ_inst.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_cancel_25px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cancel_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap IcoOpenBook {
             get {
                 object obj = ResourceManager.GetObject("IcoOpenBook", resourceCulture);
@@ -880,6 +896,16 @@ namespace online_library_for_educ_inst.Properties {
         public static System.Drawing.Bitmap image_success_45x45__png_ {
             get {
                 object obj = ResourceManager.GetObject("image_success_45x45__png_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap info {
+            get {
+                object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1262,6 +1288,16 @@ namespace online_library_for_educ_inst.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap success {
+            get {
+                object obj = ResourceManager.GetObject("success", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap TrashCan {
             get {
                 object obj = ResourceManager.GetObject("TrashCan", resourceCulture);
@@ -1305,6 +1341,16 @@ namespace online_library_for_educ_inst.Properties {
         public static System.Drawing.Bitmap UserGif {
             get {
                 object obj = ResourceManager.GetObject("UserGif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap warning {
+            get {
+                object obj = ResourceManager.GetObject("warning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

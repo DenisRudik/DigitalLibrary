@@ -5,8 +5,6 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainProgram", "MainProgram\MainProgram.csproj", "{F78F0E17-A369-4A67-8660-2737125973C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAlertBox", "MainProgram\Library - CustomMessageBox\CustomMessageBox\CustomAlertBoxDemo\CustomAlertBox.csproj", "{19039AC1-EE08-460B-821B-0277442D04D1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{F78F0E17-A369-4A67-8660-2737125973C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F78F0E17-A369-4A67-8660-2737125973C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F78F0E17-A369-4A67-8660-2737125973C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19039AC1-EE08-460B-821B-0277442D04D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19039AC1-EE08-460B-821B-0277442D04D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19039AC1-EE08-460B-821B-0277442D04D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19039AC1-EE08-460B-821B-0277442D04D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

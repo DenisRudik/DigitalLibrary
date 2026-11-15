@@ -14,9 +14,7 @@ using System;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CustomAlertBoxDemo;
 using MySqlConnector;
-using modal;
 using yt_DesignUI;
 
 
@@ -53,7 +51,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterEgoldsCard1(FmFormSubcription fmFormSubcription)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmFormSubcription.egoldsCard1.ForeColor = Color.Lime;
             fmFormSubcription.egoldsCard1.ForeColorHeader = Color.Lime;
             fmFormSubcription.IcoFofEgolds1.Visible = false;
@@ -68,7 +66,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterEgoldsCard2(FmFormSubcription fmFormSubcription)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmFormSubcription.egoldsCard2.ForeColor = Color.Lime;
             fmFormSubcription.egoldsCard2.ForeColorHeader = Color.Lime;
             fmFormSubcription.IcoFofEgolds2.Visible = false;
@@ -83,7 +81,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterEgoldsCard3(FmFormSubcription fmFormSubcription)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmFormSubcription.egoldsCard3.ForeColor = Color.Lime;
             fmFormSubcription.egoldsCard3.ForeColorHeader = Color.Lime;
             fmFormSubcription.IcoFofEgolds3.Visible = false;
@@ -443,7 +441,7 @@ namespace online_library_for_educ_inst
                 await updateBalanceCmd.ExecuteNonQueryAsync();
             }
 
-            CustomClass.Alert("Подписка " + string.Format("({0})", CustomClass.sActiveSub) + " успешно оформлена", Form_Alert.enmType.Success);
+            CustomClass.Alert("Подписка " + string.Format("({0})", CustomClass.sActiveSub) + " успешно оформлена", FormUsrAlert.enmType.Success);
         } /// Логика обновления данных пользователя при оформлении подписки на месяц
 
         public async static Task GetQueryUpdateArtisticSubscription(FmFormSubcription fmFormSubcription) 
@@ -515,7 +513,7 @@ namespace online_library_for_educ_inst
                 }
             }
 
-            CustomClass.Alert("Подписка " + string.Format("({0})", CustomClass.sActiveSub) + " успешно оформлена", Form_Alert.enmType.Success);
+            CustomClass.Alert("Подписка " + string.Format("({0})", CustomClass.sActiveSub) + " успешно оформлена", FormUsrAlert.enmType.Success);
         } /// Логика обновления данных пользователя при оформлении подписки на художественную литературу
 
         public async static Task GetQueryUpdateScientificSubscription(FmFormSubcription fmFormSubcription)
@@ -587,7 +585,7 @@ namespace online_library_for_educ_inst
                 }
             }
 
-            CustomClass.Alert("Подписка " + string.Format("({0})", CustomClass.sActiveSub) + " успешно оформлена", Form_Alert.enmType.Success);
+            CustomClass.Alert("Подписка " + string.Format("({0})", CustomClass.sActiveSub) + " успешно оформлена", FormUsrAlert.enmType.Success);
         } /// Логика обновления данных пользователя при оформлении подписки на научную литературу
 
         public async static Task GetBuySubcriptionOnMonth(FmFormSubcription fmFormSubcription)
@@ -612,7 +610,7 @@ namespace online_library_for_educ_inst
                         // Проверяем баланс
                         if (balance < modifiedCost)
                         {
-                            CustomClass.Alert("Недостаточно средств на балансе...", Form_Alert.enmType.Error);
+                            CustomClass.Alert("Недостаточно средств на балансе...", FormUsrAlert.enmType.Error);
                         }
                         else
                         {
@@ -621,7 +619,7 @@ namespace online_library_for_educ_inst
                     }
                     else
                     {
-                        CustomClass.Alert("Не удалось получить стоимость подписки.", Form_Alert.enmType.Error);
+                        CustomClass.Alert("Не удалось получить стоимость подписки.", FormUsrAlert.enmType.Error);
                     }
                 }
             }
@@ -648,7 +646,7 @@ namespace online_library_for_educ_inst
                         // Проверяем баланс
                         if (balance < modifiedCost)
                         {
-                            CustomClass.Alert("Недостаточно средств на балансе...", Form_Alert.enmType.Error);
+                            CustomClass.Alert("Недостаточно средств на балансе...", FormUsrAlert.enmType.Error);
                         }
                         else
                         {
@@ -657,7 +655,7 @@ namespace online_library_for_educ_inst
                     }
                     else
                     {
-                        CustomClass.Alert("Не удалось получить стоимость подписки.", Form_Alert.enmType.Error);
+                        CustomClass.Alert("Не удалось получить стоимость подписки.", FormUsrAlert.enmType.Error);
                     }
                 }
             }
@@ -681,14 +679,14 @@ namespace online_library_for_educ_inst
                         decimal balance;
                         if (!decimal.TryParse(CustomClass.sBalance.Substring(0, CustomClass.sBalance.Length - 3), out balance))
                         {
-                            CustomClass.Alert("Ошибка при чтении баланса.", Form_Alert.enmType.Error);
+                            CustomClass.Alert("Ошибка при чтении баланса.", FormUsrAlert.enmType.Error);
                             return;
                         }
 
                         // Проверяем баланс
                         if (balance < subscriptionCost)
                         {
-                            CustomClass.Alert("Недостаточно средств на балансе...", Form_Alert.enmType.Error);
+                            CustomClass.Alert("Недостаточно средств на балансе...", FormUsrAlert.enmType.Error);
                         }
                         else
                         {
@@ -697,7 +695,7 @@ namespace online_library_for_educ_inst
                     }
                     else
                     {
-                        CustomClass.Alert("Не удалось получить стоимость подписки.", Form_Alert.enmType.Error);
+                        CustomClass.Alert("Не удалось получить стоимость подписки.", FormUsrAlert.enmType.Error);
                     }
                 }
             }

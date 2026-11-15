@@ -16,7 +16,6 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text;
 using MySqlConnector;
-using CustomAlertBoxDemo;
 
 
 namespace online_library_for_educ_inst
@@ -86,21 +85,21 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterPictTxtRecordBook(FmAuthorizationForm fmAuthorizationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.PictTxtRecordBook.Image = Properties.Resources.PictRegRecordBook;
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.PictTxtRecordBook, "Введите номер своей зачётки...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictTxtPass(FmAuthorizationForm fmAuthorizationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.PictTxtPass.Image = Properties.Resources.PictRegPass;
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.PictTxtPass, "Введите пароль от учётной записи...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictConfirmPass(FmAuthorizationForm fmAuthorizationForm) 
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.PictConfirmPass.Image = Properties.Resources.PictRegPass;
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.PictConfirmPass, "Повторите пароль...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -108,7 +107,7 @@ namespace online_library_for_educ_inst
         public static void CallOnMouseEnterPictEyePassToTxtPass(FmAuthorizationForm fmAuthorizationForm)
         {
             fmAuthorizationForm.TxtPass.PasswordChar = '\0';
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.PictEyePassToTxtPass.Image = Properties.Resources.PictAuthHidePass;
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.PictEyePassToTxtPass, "Скрыть пароль...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -116,35 +115,35 @@ namespace online_library_for_educ_inst
         public static void CallOnMouseEnterPictTxtConfirmPass(FmAuthorizationForm fmAuthorizationForm)
         {
             fmAuthorizationForm.TxtConfirmPass.PasswordChar = '\0';
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.PictTxtConfirmPass.Image = Properties.Resources.PictAuthHidePass;
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.PictTxtConfirmPass, "Скрыть пароль...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterLblGotoWelcomeForm(FmAuthorizationForm fmAuthorizationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.LblGotoWelcomeForm, "Выйти с формы авторизации");
             fmAuthorizationForm.LblGotoWelcomeForm.ForeColor = Color.FromArgb(20, 144, 27);
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterLblGotoReg(FmAuthorizationForm fmAuthorizationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.LblGotoReg, "Перейти к форме регистрации");
             fmAuthorizationForm.LblGotoReg.ForeColor = Color.FromArgb(20, 144, 27);
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterLblGotoLostAcc(FmAuthorizationForm fmAuthorizationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.LblGotoLostAcc, "Перейти к мастеру восстановления аккаунтов");
             fmAuthorizationForm.LblGotoLostAcc.ForeColor = Color.FromArgb(20, 144, 27);
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictDelTxtRecordBook(FmAuthorizationForm fmAuthorizationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmAuthorizationForm.PictDelTxtRecordBook.Image = Properties.Resources.TrashCanGifAuth;
             fmAuthorizationForm.ToolTipHelpUser.SetToolTip(fmAuthorizationForm.PictDelTxtRecordBook, "Удалить данные с поля зачётки");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -165,7 +164,7 @@ namespace online_library_for_educ_inst
 
             if (CustomClass.isOpenedFormAuthorization)
             {
-                CustomClass.Alert("Форма регистрации уже открыта", Form_Alert.enmType.Info);
+                CustomClass.Alert("Форма регистрации уже открыта", FormUsrAlert.enmType.Info);
                 fmAuthorizationForm.Close();
             }
 
@@ -226,7 +225,7 @@ namespace online_library_for_educ_inst
         public static void GetDeleteDataTxtRecordBook(FmAuthorizationForm fmAuthorizationForm)
         {
             fmAuthorizationForm.TxtRecordBook.Text = null;
-            CustomClass.Alert("Данные о зачётки успешно удалены!", Form_Alert.enmType.Info);
+            CustomClass.Alert("Данные о зачётки успешно удалены!", FormUsrAlert.enmType.Info);
         } /// Реализация удаления данных с компонента номера зачетной книжки пользователя
 
         public static void CallPasswordRecoveryAssistantForm(FmAuthorizationForm fmAuthorizationForm)
@@ -333,7 +332,7 @@ namespace online_library_for_educ_inst
                     string sPasswordHashFromDB = CustomClass.sPasswordNewUser;
                     if (sPasswordFromTxt != sPasswordHashFromDB)
                     {
-                        CustomClass.Alert("Не верный пароль для данного номера зачётки!.Учтите его регистр", Form_Alert.enmType.Info);
+                        CustomClass.Alert("Не верный пароль для данного номера зачётки!.Учтите его регистр", FormUsrAlert.enmType.Info);
                         CustomClass.iCountWrongPassword += 1;
                     }
                     else if (sPasswordFromTxt == sPasswordHashFromDB && sConfPass == sPasswordHashFromDB)
@@ -342,7 +341,7 @@ namespace online_library_for_educ_inst
                                                                     /// события Load() вызываем метод Dispose(),который будет удалять эту форму тем самым не создавая новый экземпляр формы
 
                         CustomClass.CallAnimationCloseForm(fmAuthorizationForm);
-                        CustomClass.Alert("Авторизация прошла успешно.Подождите,осуществляется вход в аккаунт...", Form_Alert.enmType.Success);
+                        CustomClass.Alert("Авторизация прошла успешно.Подождите,осуществляется вход в аккаунт...", FormUsrAlert.enmType.Success);
                         Form Load_account_Form = new FmLoadAccountForm();
                         Load_account_Form.Show();
                     }
@@ -350,7 +349,7 @@ namespace online_library_for_educ_inst
             }
             catch (MySqlException)
             {
-                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", Form_Alert.enmType.Error);
+                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", FormUsrAlert.enmType.Error);
             }
         } /// Реализация основного метода авторизации данных пользователя. Запускается процесс асинхронной выборки с БД и осуществляется ряд валидационных алгоритмов над этими данными
           /// В случае правильно введеных данных, происходит процесс передачи записи в загрузочную форму аккаунта пользователя и загрузки основного окна программы
@@ -370,7 +369,7 @@ namespace online_library_for_educ_inst
                     {
                         if (!await reader.ReadAsync() && fmAuthorizationForm.TxtRecordBook.Text != "")
                         {
-                            CustomClass.Alert("Пользователь с таким номером зачётки не найден!", Form_Alert.enmType.Error);
+                            CustomClass.Alert("Пользователь с таким номером зачётки не найден!", FormUsrAlert.enmType.Error);
                         }
                     }
 
@@ -378,7 +377,7 @@ namespace online_library_for_educ_inst
             }
             catch(MySqlException)
             {
-                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", Form_Alert.enmType.Error);
+                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", FormUsrAlert.enmType.Error);
             }
             
         } /// Описание метода нахождения не существующего пользователя по номеру его зачетной книжки
@@ -390,7 +389,7 @@ namespace online_library_for_educ_inst
             if (sNumberDigit.Length < CustomClass.COUNT_DIGIT_FOR_DOCUMENT)
             {
                 fmAuthorizationForm.TxtRecordBook.Text = null;
-                CustomClass.Alert("Номер студенческого билета не может быть меньше 7 цифр!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Номер студенческого билета не может быть меньше 7 цифр!", FormUsrAlert.enmType.Error);
             }
         } /// Реализация проверки на количество введеных символов номера зачетки
 
@@ -402,7 +401,7 @@ namespace online_library_for_educ_inst
             sConfirmPass = fmAuthorizationForm.TxtConfirmPass.Text;
 
             if (sPass != sConfirmPass)
-                CustomClass.Alert("Пароли не совпадают!.Проверьте корректность ввода.", Form_Alert.enmType.Error);
+                CustomClass.Alert("Пароли не совпадают!.Проверьте корректность ввода.", FormUsrAlert.enmType.Error);
         } /// Метод для сравнения паролей на корректность, если пользователь ввел его неправильно со второго раза
 
         public static void GetCheckNullTxtBox(FmAuthorizationForm fmAuthorizationForm)
@@ -410,7 +409,7 @@ namespace online_library_for_educ_inst
             if (string.IsNullOrEmpty(fmAuthorizationForm.TxtRecordBook.Text) || string.IsNullOrEmpty(fmAuthorizationForm.TxtConfirmPass.Text) ||
                 string.IsNullOrEmpty(fmAuthorizationForm.TxtPass.Text))
             {
-                CustomClass.Alert("Не заполнены необходимые данные для регистрации!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Не заполнены необходимые данные для регистрации!", FormUsrAlert.enmType.Error);
             }
         } /// Проверка на заполненость всех компонентов для ввода данных
 

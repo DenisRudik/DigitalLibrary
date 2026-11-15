@@ -1,6 +1,8 @@
-﻿namespace CustomAlertBoxDemo
-{
-    partial class Form_Alert
+﻿using System;
+using System.Windows.Forms;
+
+
+    partial class FormUsrAlert
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Alert));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsrAlert));
             this.lblMsg = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -50,7 +52,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CustomAlertBoxDemo.Properties.Resources.success;
+            this.pictureBox1.Image = global::online_library_for_educ_inst.Properties.Resources.success;
             this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 39);
@@ -64,7 +66,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CustomAlertBoxDemo.Properties.Resources.icons8_cancel_25px;
+            this.pictureBox2.Image = global::online_library_for_educ_inst.Properties.Resources.icons8_cancel_25px;
             this.pictureBox2.Location = new System.Drawing.Point(832, 22);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 30);
@@ -99,4 +101,3 @@
         internal System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
-}

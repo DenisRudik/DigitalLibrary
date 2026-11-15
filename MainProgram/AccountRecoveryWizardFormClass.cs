@@ -17,7 +17,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CustomAlertBoxDemo;
 using MySqlConnector;
 
 namespace online_library_for_educ_inst
@@ -39,14 +38,14 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterPictTxtRecordBook(FmPasswordRecoveryAssistantForm fmPasswordRecoveryAssistantForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmPasswordRecoveryAssistantForm.PictTxtRecordBook.Image = Properties.Resources.PictRegRecordBook;
             fmPasswordRecoveryAssistantForm.ToolTipHelpUser.SetToolTip(fmPasswordRecoveryAssistantForm.PictTxtRecordBook, "Введите номер своей зачётки...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictRecoveryCode(FmPasswordRecoveryAssistantForm fmPasswordRecoveryAssistantForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmPasswordRecoveryAssistantForm.PictRecoveryCode.Image = Properties.Resources.PictRegSecretPass;
             fmPasswordRecoveryAssistantForm.ToolTipHelpUser.SetToolTip(fmPasswordRecoveryAssistantForm.PictRecoveryCode, "Введите секретное слово которое вы задавали при регистрации аккаунта...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -54,14 +53,14 @@ namespace online_library_for_educ_inst
         public static void CallOnMouseEnterPictEyeRecoveryCodeShow(FmPasswordRecoveryAssistantForm fmPasswordRecoveryAssistantForm)
         {
             fmPasswordRecoveryAssistantForm.TxtRecoveryCode.PasswordChar = '\0';
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmPasswordRecoveryAssistantForm.PictEyeRecoveryCodeShow.Image = Properties.Resources.PictRegHidePass;
             fmPasswordRecoveryAssistantForm.ToolTipHelpUser.SetToolTip(fmPasswordRecoveryAssistantForm.PictEyeRecoveryCodeShow, "Скрыть пароль...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterLblCloseRecoveryForm(FmPasswordRecoveryAssistantForm fmPasswordRecoveryAssistantForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmPasswordRecoveryAssistantForm.LblCloseRecoveryForm.ForeColor = Color.FromArgb(172, 43, 244);
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
@@ -79,7 +78,7 @@ namespace online_library_for_educ_inst
         {
             if (string.IsNullOrEmpty(fmPasswordRecoveryAssistantForm.TxtRecordBook.Text) || string.IsNullOrEmpty(fmPasswordRecoveryAssistantForm.TxtRecoveryCode.Text))
             {
-                CustomClass.Alert("Не заполнены необходимые данные для поиска аккаунта!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Не заполнены необходимые данные для поиска аккаунта!", FormUsrAlert.enmType.Error);
             }
         } /// Метод для проверки заполненности всех компонентов на форме данными для нахождения аккаунта
 
@@ -90,7 +89,7 @@ namespace online_library_for_educ_inst
             if (sNumberDigit.Length < CustomClass.COUNT_DIGIT_FOR_DOCUMENT)
             {
                 fmPasswordRecoveryAssistantForm.TxtRecordBook.Text = null;
-                CustomClass.Alert("Номер студенческого билета не может быть меньше 7 цифр!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Номер студенческого билета не может быть меньше 7 цифр!", FormUsrAlert.enmType.Error);
             }
         } /// Реализация подсчета количества символов в номере студенческого билета
 
@@ -116,7 +115,7 @@ namespace online_library_for_educ_inst
 
             if (CustomClass.isShowMessageRecoveryAssistantForm)
             {
-                CustomClass.Alert("Номер зачётной книжки автоматическии вставлен!", Form_Alert.enmType.Info);
+                CustomClass.Alert("Номер зачётной книжки автоматическии вставлен!", FormUsrAlert.enmType.Info);
             }
         } /// Метод для автоматической вставки номера зачетной книжки в соответсвующий компонент
 
@@ -188,11 +187,11 @@ namespace online_library_for_educ_inst
                 {
                     if (CustomClass.sRecoveryCode != sHashRecoveryCodeFromTxt)
                     {
-                        CustomClass.Alert("Не верный секретный пароль для данного номера зачётки!Учтите регистр пароля", Form_Alert.enmType.Error);
+                        CustomClass.Alert("Не верный секретный пароль для данного номера зачётки!Учтите регистр пароля", FormUsrAlert.enmType.Error);
                         fmPasswordRecoveryAssistantForm.TxtRecoveryCode.Text = null;
                     }
                     if (sHashRecoveryCodeFromTxt == null)
-                        CustomClass.Alert("Ошибка на стороне сервера,секретное слово правильно,примите его!.", Form_Alert.enmType.Info);
+                        CustomClass.Alert("Ошибка на стороне сервера,секретное слово правильно,примите его!.", FormUsrAlert.enmType.Info);
                     else if (fmPasswordRecoveryAssistantForm.TxtRecordBook.Text != "" && fmPasswordRecoveryAssistantForm.TxtRecoveryCode.Text != "")
                     {
                         if (MessageBox.Show("Мастер восстановления аккаунтов нашёл учётную запись со следующим номером зачетной книжки: " + sRecordNumText + " и никнеймом - " + CustomClass.sNickNameNewUser + ", это ваш аккаунт? ",
@@ -203,7 +202,7 @@ namespace online_library_for_educ_inst
                                                                         /// события Load() вызываем метод Dispose(),который будет удалять эту форму тем самым не создавая новый экземпляр формы
 
                             CustomClass.CallAnimationCloseForm(fmPasswordRecoveryAssistantForm);
-                            CustomClass.Alert("Авторизация прошла успешно.Подождите,осуществляется вход в аккаунт...", Form_Alert.enmType.Success);
+                            CustomClass.Alert("Авторизация прошла успешно.Подождите,осуществляется вход в аккаунт...", FormUsrAlert.enmType.Success);
                             Form Load_account_Form = new FmLoadAccountForm();
                             Load_account_Form.Show();
                         }
@@ -212,7 +211,7 @@ namespace online_library_for_educ_inst
             }
             catch (MySqlException)
             {
-                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", Form_Alert.enmType.Warning);
+                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", FormUsrAlert.enmType.Warning);
             }
         } /// Реализация алгоритма нахождения забытого пароля
 
@@ -229,7 +228,7 @@ namespace online_library_for_educ_inst
                 {
                     if (!await reader.ReadAsync() && fmPasswordRecoveryAssistantForm.TxtRecordBook.Text != "")
                     {
-                        CustomClass.Alert("Пользователь с таким номером зачётки не найден!", Form_Alert.enmType.Error);
+                        CustomClass.Alert("Пользователь с таким номером зачётки не найден!", FormUsrAlert.enmType.Error);
                     }
                 }
 

@@ -15,8 +15,6 @@ using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CustomAlertBoxDemo;
-using modal;
 
 namespace online_library_for_educ_inst
 { 
@@ -138,7 +136,7 @@ namespace online_library_for_educ_inst
         // Часть 2 - Описание логики компонентов
         public static void ExitFromApplication(FmChooseRoleForm fmChooseRoleForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             CustomClass.bUserWantCloseApp = true;
             Form modalBackground = new Form();
             using (FrmModalForm modal = new FrmModalForm())
@@ -177,7 +175,7 @@ namespace online_library_for_educ_inst
 
         public static void CallWelcomeForm(FmChooseRoleForm fmChooseRoleForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             fmChooseRoleForm.ForeColor = Color.Aqua;
             Form modalBackground = new Form();
             using (FrmModalForm modal = new FrmModalForm())
@@ -210,7 +208,7 @@ namespace online_library_for_educ_inst
 
         public static void CallLicenseAgreement(FmChooseRoleForm fmChooseRoleForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             Form modalBackground = new Form();
             using (FrmModalForm modal = new FrmModalForm())
             {
@@ -248,7 +246,7 @@ namespace online_library_for_educ_inst
             if (CustomClass.isOpenedWelcomeForm)
             {
                 CustomClass.CallAnimationCloseForm(fmChooseRoleForm);
-                CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClose.ToString());
+                CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClose.ToString());
                 Form Welcome_Form = new FmWelcomeForm();
                 Welcome_Form.Show();
                 fmChooseRoleForm.Close();

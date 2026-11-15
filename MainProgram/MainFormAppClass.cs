@@ -16,9 +16,7 @@ using System;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using CustomAlertBoxDemo;
 using MySqlConnector;
-using modal;
 using yt_DesignUI;
 
 namespace online_library_for_educ_inst
@@ -34,7 +32,7 @@ namespace online_library_for_educ_inst
 
         public static void GetShowStartMessage()
         {
-            CustomClass.Alert("Добро пожаловать в электронную библиотеку: " + CustomClass.sNickNameNewUser + "!", Form_Alert.enmType.Info);
+            CustomClass.Alert("Добро пожаловать в электронную библиотеку: " + CustomClass.sNickNameNewUser + "!", FormUsrAlert.enmType.Info);
         } /// Вывод приветствующего сообщения при входе в систему
 
         public static void GetLowerComponentTile(FmMainFormApp fmMainFormApp)
@@ -160,7 +158,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterBtnOpenBooks(FmMainFormApp fmMainFormApp)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             fmMainFormApp.BtnOpenBooks.ForeColor = Color.PaleGreen;
 
@@ -169,7 +167,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterBtnUserProfile(FmMainFormApp fmMainFormApp)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             fmMainFormApp.BtnUserProfile.ForeColor = Color.PaleGreen;
 
@@ -178,7 +176,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterBtnExitApp(FmMainFormApp fmMainFormApp)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             fmMainFormApp.BtnExitApp.ForeColor = Color.PaleGreen;
 
@@ -187,7 +185,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterBtnShowSub(FmMainFormApp fmMainFormApp)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             fmMainFormApp.BtnShowSub.ForeColor = Color.PaleGreen;
 
@@ -196,7 +194,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterBtnSettings(FmMainFormApp fmMainFormApp)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             fmMainFormApp.BtnSettings.ForeColor = Color.PaleGreen;
 
@@ -205,7 +203,7 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterBtnReturnBack(FmMainFormApp fmMainFormApp)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             fmMainFormApp.BtnReturnBack.ForeColor = Color.PaleGreen;
 
@@ -297,7 +295,7 @@ namespace online_library_for_educ_inst
 
             if (CustomClass.sSubscriptionNewUser == "")
             {
-                CustomClass.Alert("Оформите подписку перед тем как выбрать книгу!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Оформите подписку перед тем как выбрать книгу!", FormUsrAlert.enmType.Error);
             }
             else
             {
@@ -347,7 +345,7 @@ namespace online_library_for_educ_inst
                 modalBackground.Dispose();
 
             }
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } /// Вызов формы информации о профиле пользователя
 
         public static void CallFormExitApplication(FmMainFormApp fmMainFormApp)
@@ -392,7 +390,7 @@ namespace online_library_for_educ_inst
                 Application.Exit();
             }
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } /// Вызов формы выхода с программы
 
         public static void GetCheckSubscriptionUser(FmMainFormApp fmMainFormApp)
@@ -425,7 +423,7 @@ namespace online_library_for_educ_inst
                 }
                 else
                 {
-                    CustomClass.Alert("У вас уже есть оформленная подписка - " + string.Format("({0})", CustomClass.sActiveSub), Form_Alert.enmType.Warning);
+                    CustomClass.Alert("У вас уже есть оформленная подписка - " + string.Format("({0})", CustomClass.sActiveSub), FormUsrAlert.enmType.Warning);
                 }
             }
             catch (ArgumentOutOfRangeException)
@@ -457,18 +455,18 @@ namespace online_library_for_educ_inst
                 app_options_Form.ShowDialog();
                 modalBackground.Dispose();
             }
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         } /// Вызов формы настроек приложения
 
         public static void CallFormRestartApplication(FmMainFormApp fmMainFormApp)
         {
             int iParentX, iParentY;
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             try
             {
-                CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+                CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
                 Form modalBackground = new Form();
                 using (FrmModalForm modal = new FrmModalForm())
                 {
@@ -504,7 +502,7 @@ namespace online_library_for_educ_inst
 
             catch
             {
-                CustomClass.Alert("Критическая ошибка в системе!", Form_Alert.enmType.Warning);
+                CustomClass.Alert("Критическая ошибка в системе!", FormUsrAlert.enmType.Warning);
             }
 
             if ((CustomClass.bUserWantSub && CustomClass.bWantSubToMonth) || (CustomClass.bUserWantSub && CustomClass.bWantSubArtistic) || (CustomClass.bUserWantSub && CustomClass.bWantSubScientific))

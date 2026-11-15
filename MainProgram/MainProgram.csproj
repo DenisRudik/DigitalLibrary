@@ -161,6 +161,12 @@
       <DependentUpon>FormSubcription.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSubscriptionClass.cs" />
+    <Compile Include="FormUsrAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsrAlert.Designer.cs">
+      <DependentUpon>FormUsrAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadAccountFormClass.cs" />
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
@@ -246,6 +252,9 @@
     <EmbeddedResource Include="FormSubcription.resx">
       <DependentUpon>FormSubcription.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUsrAlert.resx">
+      <DependentUpon>FormUsrAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +303,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\UNDO_LAST_FORM.png" />
+    <None Include="Resources\SUM_CUBE_FORM.jpg" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\icons8_cancel_25px.png" />
+    <None Include="Resources\error.png" />
     <None Include="Resources\database 256x256.png" />
     <None Include="Resources\icon_close_app 256x256%28png%29.png" />
     <None Include="Resources\FormGif.gif" />
@@ -436,12 +453,6 @@
     <Content Include="MetroFramework.txt" />
     <None Include="Resources\2997608.png" />
     <None Include="Resources\123-1233273_data-icon-for-safe-data-exchange-digital-library.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Library - CustomMessageBox\CustomMessageBox\CustomAlertBoxDemo\CustomAlertBox.csproj">
-      <Project>{19039ac1-ee08-460b-821b-0277442d04d1}</Project>
-      <Name>CustomAlertBox</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

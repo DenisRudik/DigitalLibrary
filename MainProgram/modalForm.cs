@@ -3,16 +3,14 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using System.Diagnostics;
-using CustomAlertBoxDemo;
 using System.Drawing.Drawing2D;
 using online_library_for_educ_inst;
 
 
-namespace modal
-{
+
     public partial class FrmModalForm : Form
     {
-        #region /// to determine objects in fields for CustomLibraryClass
+        #region /// 
         public static Label FRM_modalForm_lbl_msg_for_user;
         public static Label FRM_modalForm_lbl_text_message;
         public static Label FRM_modalForm_lbl_load_progress;
@@ -149,7 +147,7 @@ namespace modal
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             AnimationCloseForm();
             CustomClass.bUserWantCloseApp = false;
             CustomClass.bUserWantResApp = false;
@@ -162,26 +160,26 @@ namespace modal
         private void BtnRestartApp_Click(object sender, EventArgs e)
         {
             CustomClass.bUserWantResApp = true;
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
             AnimationCloseForm();
             Application.Restart();
         }
 
         private void BtnExitApp_Click(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
 
             if (CustomClass.bUserWantCloseApp)
             {
                 AnimationCloseForm();
-                CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClose.ToString());
+                CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClose.ToString());
                 GC.Collect();
             }
         }
 
         private void BtnOK_Click (object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundClicked.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClicked.ToString());
 
             if (CustomClass.isOpenedChooseRoleForm)
             {
@@ -195,7 +193,7 @@ namespace modal
 
                 if (MChckBoxConfirmReadLicenseAgreement.Checked == false)
                 {
-                    CustomClass.Alert("Подтвердите,что вы прочитали лицензионное соглашение", Form_Alert.enmType.Info);
+                    CustomClass.Alert("Подтвердите,что вы прочитали лицензионное соглашение", FormUsrAlert.enmType.Info);
                 }
                 else if (MChckBoxConfirmReadLicenseAgreement.Checked)
                 {
@@ -284,5 +282,5 @@ namespace modal
 
         
     }
-    }
+    
 

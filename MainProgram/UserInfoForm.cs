@@ -1,6 +1,5 @@
 ﻿
 using System;
-using CustomAlertBoxDemo;
 
 namespace online_library_for_educ_inst
 {
@@ -15,7 +14,7 @@ namespace online_library_for_educ_inst
         {
             UserInfoFormClass.GetDataUser(this);
 
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
 
             CustomClass.GetRoundedShapeForm(this);
 

@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using CustomAlertBoxDemo;
 
 
 namespace online_library_for_educ_inst
@@ -177,7 +176,7 @@ namespace online_library_for_educ_inst
 
         private void BtnAuth_Enter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             BtnAuth.ForeColor = Color.LimeGreen;
         }
      

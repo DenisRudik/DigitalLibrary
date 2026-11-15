@@ -15,10 +15,7 @@ using System.Media;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using CustomAlertBoxDemo;
 using MySqlConnector;
-using static CustomAlertBoxDemo.Form_Alert;
 
 
 
@@ -115,7 +112,7 @@ using static CustomAlertBoxDemo.Form_Alert;
         public static string sPathProject = Directory.GetCurrentDirectory(); // поле, для получения информации о директории, в котором находится файл .exe
 
 
-        public static string sFullPathToMaterials = Directory.GetParent(pathProject).Parent.FullName + Path.DirectorySeparatorChar + "materials" +
+        public static string sFullPathToMaterials = Directory.GetParent(FormUsrAlert.pathProject).Parent.FullName + Path.DirectorySeparatorChar + "materials" +
                               Path.DirectorySeparatorChar; // поле для получения доступа к файлам из папки Materials
 
         public static string sResultValueComboboxMcombxSelectGenreBook = null; /// поле, для конвертации значения полученого из поля 
@@ -124,7 +121,7 @@ using static CustomAlertBoxDemo.Form_Alert;
 
         public static string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"; // символы для генерации пароля
 
-        public static string fullPathToBook = Directory.GetParent(pathProject).Parent.FullName + Path.DirectorySeparatorChar + "materials" +
+        public static string fullPathToBook = Directory.GetParent(FormUsrAlert.pathProject).Parent.FullName + Path.DirectorySeparatorChar + "materials" +
                       Path.DirectorySeparatorChar + "Books" + Path.DirectorySeparatorChar;  // поле для получения доступа к файлам из папки Books
 
         public static string sNameBook = null;  /// поле, для хранения наименования выбранной литературы
@@ -214,10 +211,10 @@ using static CustomAlertBoxDemo.Form_Alert;
                 SoundPlayer.Play();
             }
         }
-        public static void Alert(string msg, Form_Alert.enmType type) /// обязательный метод для создания кастомного AlertBox.
+        public static void Alert(string msg, FormUsrAlert.enmType type) /// обязательный метод для создания кастомного AlertBox.
                                                                       /// Наследуется от родительского класса Control 
         {
-            Form_Alert frm = new Form_Alert();
+            FormUsrAlert frm = new FormUsrAlert();
             frm.showAlert(msg, type);
 
         }
@@ -251,12 +248,12 @@ using static CustomAlertBoxDemo.Form_Alert;
 
         public static void ShowRecoveryPasswordForUser() 
         {
-            Alert("Ваш восстановленный пароль : " + sBufferRecoveredPassword + " введите его!", Form_Alert.enmType.Info);
+            Alert("Ваш восстановленный пароль : " + sBufferRecoveredPassword + " введите его!", FormUsrAlert.enmType.Info);
         } /// процедура для вывода пользователю восстановленного пароля
 
         public static void PlaySoundEffect(string sNameSound)
         {
-            SoundPlayer = new SoundPlayer(fullPathToSound + sNameSound + ".wav");
+            SoundPlayer = new SoundPlayer(FormUsrAlert.fullPathToSound + sNameSound + ".wav");
         } /// Метод для проигрывания различных звуковых эффектов в завимости от такого, какого рода ошибку выдала система. Входным параметром принимается наименование самого звука
 
         public static void GetRoundedShapeForm(Form sNameForm)
@@ -295,7 +292,7 @@ using static CustomAlertBoxDemo.Form_Alert;
                 {
                     await conn.OpenAsync();
 
-                    Alert("Соединение с сервером установлено!", enmType.Info);
+                    Alert("Соединение с сервером установлено!", FormUsrAlert.enmType.Info);
 
                     if (!bOpenConnToDb)
                     {
@@ -305,7 +302,7 @@ using static CustomAlertBoxDemo.Form_Alert;
             }
             catch (MySqlException)
             {
-                Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", Form_Alert.enmType.Error);
+                Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", FormUsrAlert.enmType.Error);
             }
         } /// Описание асинхронного метода для подлючения к локальной БД
     }

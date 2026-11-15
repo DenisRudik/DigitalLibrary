@@ -19,8 +19,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using CustomAlertBoxDemo;
-using modal;
 using MySqlConnector;
 
 
@@ -108,35 +106,35 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterRecordBook(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictTxtRecordBook.Image = Properties.Resources.PictRegRecordBookCursored;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictTxtRecordBook, "Введите номер своей зачётки...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictNickname(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictNickname.Image = Properties.Resources.PictRegNickNameCursored;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictNickname, "Введите свой никнейм...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictTxtPass(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictTxtPass.Image = Properties.Resources.PictRegPassCursored;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictTxtPass, "Введите пароль для вашей учетной записи...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictRecoveryCode(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictRecoveryCode.Image = Properties.Resources.PictRegSecretPassCursored;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictRecoveryCode, "Введите секретное слово для восстановления пароля...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictSex(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictSex.Image = Properties.Resources.PictRegSexCursored;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictSex, "Выберите вашу гендерную принадлежность");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -144,7 +142,7 @@ namespace online_library_for_educ_inst
         public static void CallOnMouseEnterPictEyePassToTxtPass(FmRegistrationForm fmRegistrationForm)
         {
             fmRegistrationForm.TxtPass.PasswordChar = '\0';
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictEyePassToTxtPass.Image = Properties.Resources.PictRegHidePass;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictEyePassToTxtPass, "Скрыть пароль...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -152,14 +150,14 @@ namespace online_library_for_educ_inst
         public static void CallOnMouseEnterPictToTxtSecretPass(FmRegistrationForm fmRegistrationForm)
         {
             fmRegistrationForm.TxtRecoveryCode.PasswordChar = '\0';
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictToTxtSecretPass.Image = Properties.Resources.PictRegHidePass;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictToTxtSecretPass, "Скрыть секретное слово...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterLblGotoFormAuth(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.LblGotoFormAuth, "Перейти в форму авторизации");
             fmRegistrationForm.LblGotoFormAuth.ForeColor = Color.ForestGreen;
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -202,14 +200,14 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterPictDelTxtRecordBook(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictDelTxtRecordBook.Image = Properties.Resources.TrashCanGif;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictDelTxtRecordBook, "Удалить данные с поля зачётки");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterPictDelTxtNickName(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictDelTxtNickName.Image = Properties.Resources.TrashCanGif;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictDelTxtNickName, "Удалить данные с поля никнейма");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -217,12 +215,12 @@ namespace online_library_for_educ_inst
         public static void CallDeleteDataTxtNickName(FmRegistrationForm fmRegistrationForm)
         {
             fmRegistrationForm.TxtNickName.Text = null;
-            CustomClass.Alert("Данные о никнейме успешно удалены!", Form_Alert.enmType.Info);
+            CustomClass.Alert("Данные о никнейме успешно удалены!", FormUsrAlert.enmType.Info);
         } // Удаление данных с поля для ввода никнейма
 
         public static void CallOnMouseEnterPictDelTxtPass(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictDelTxtPass.Image = Properties.Resources.TrashCanGif;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictDelTxtPass, "Удалить данные с поле пароля");
         }// Вызов анимации для компонента если на него наведен курсор мыши
@@ -230,12 +228,12 @@ namespace online_library_for_educ_inst
         public static void CallDeleteDataTxtPass(FmRegistrationForm fmRegistrationForm)
         {
             fmRegistrationForm.TxtPass.Text = null;
-            CustomClass.Alert("Данные о пароле успешно удалены!", Form_Alert.enmType.Info);
+            CustomClass.Alert("Данные о пароле успешно удалены!", FormUsrAlert.enmType.Info);
         } // Удаление данных с поля для ввода пароля
 
         public static void CallOnMouseEnterPictDelTxtRecoveryCode(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.PictDelTxtRecoveryCode.Image = Properties.Resources.TrashCanGif;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.PictDelTxtRecoveryCode, "Удалить данные с поля секретного слова");
         } // Вызов анимации для компонента если на него наведен курсор мыши
@@ -243,7 +241,7 @@ namespace online_library_for_educ_inst
         public static void CallDeleteDataTxtRecoveryCode(FmRegistrationForm fmRegistrationForm)
         {
             fmRegistrationForm.TxtRecoveryCode.Text = null;
-            CustomClass.Alert("Данные о секретном слове успешно удалены!", Form_Alert.enmType.Info);
+            CustomClass.Alert("Данные о секретном слове успешно удалены!", FormUsrAlert.enmType.Info);
         } // Удаление данных с поля ввода секретного слова
 
         public static void CallAcceptNullTxtBox(FmRegistrationForm fmRegistrationForm)
@@ -270,21 +268,22 @@ namespace online_library_for_educ_inst
 
         public static void CallOnMouseEnterLblGotoWelcomeForm(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString()); CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString()); 
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.LblGotoWelcomeForm, "Выйти с формы регистрации");
             fmRegistrationForm.LblGotoWelcomeForm.ForeColor = Color.Red;
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterLblGeneratePas(FmRegistrationForm fmRegistrationForm)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.LblGeneratePas.ForeColor = Color.DarkTurquoise;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.LblGeneratePas, "Сгенерировать уникальный пароль для вашего аккаунта...");
         } // Вызов анимации для компонента если на него наведен курсор мыши
 
         public static void CallOnMouseEnterLblGenerateSecretPass(FmRegistrationForm fmRegistrationForm) // Вызов анимации для компонента если на него наведен курсор мыши
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             fmRegistrationForm.LblGenerateSecretPass.ForeColor = Color.DarkTurquoise;
             fmRegistrationForm.ToolTipHelpUser.SetToolTip(fmRegistrationForm.LblGenerateSecretPass, "Сгенерировать секретное слово для вашего аккаунта...");
         }
@@ -447,11 +446,11 @@ namespace online_library_for_educ_inst
                     await comm.ExecuteNonQueryAsync();
                 }
 
-                CustomClass.Alert(" Читатель с НикНеймом: " + fmRegistrationForm.TxtNickName.Text + " успешно зарегестрирован! ", Form_Alert.enmType.Success);
+                CustomClass.Alert(" Читатель с НикНеймом: " + fmRegistrationForm.TxtNickName.Text + " успешно зарегестрирован! ", FormUsrAlert.enmType.Success);
             }
             else
             {
-                CustomClass.Alert("Не заполнены необходимые данные для регистрации!", Form_Alert.enmType.Warning);
+                CustomClass.Alert("Не заполнены необходимые данные для регистрации!", FormUsrAlert.enmType.Warning);
             }
         }
 
@@ -468,7 +467,7 @@ namespace online_library_for_educ_inst
                 {
                     if (await reader.ReadAsync())
                     {
-                        CustomClass.Alert("Читатель с данным номером зачётки уже зарегистрирован!", Form_Alert.enmType.Info);
+                        CustomClass.Alert("Читатель с данным номером зачётки уже зарегистрирован!", FormUsrAlert.enmType.Info);
                         fmRegistrationForm.TxtRecordBook.Text = null;
                         bAcceptRegUser = false;
                     }
@@ -481,7 +480,7 @@ namespace online_library_for_educ_inst
                 {
                     if (await new_reader.ReadAsync())
                     {
-                        CustomClass.Alert("Читатель с таким никнеймом уже зарегистрирован!", Form_Alert.enmType.Info);
+                        CustomClass.Alert("Читатель с таким никнеймом уже зарегистрирован!", FormUsrAlert.enmType.Info);
                         fmRegistrationForm.TxtNickName.Text = null;
                         bAcceptRegUser = false;
                     }
@@ -496,7 +495,7 @@ namespace online_library_for_educ_inst
             if (sNumberDigit.Length < CustomClass.COUNT_DIGIT_FOR_DOCUMENT)
             {
                 fmRegistrationForm.TxtRecordBook.Text = null;
-                CustomClass.Alert("Номер студенческого билета не может быть меньше 7 цифр!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Номер студенческого билета не может быть меньше 7 цифр!", FormUsrAlert.enmType.Error);
                 bAcceptRegUser = false;
             }
         } /// Реализация проверки на количество введеных символов номера зачетки
@@ -506,7 +505,7 @@ namespace online_library_for_educ_inst
             if (string.IsNullOrEmpty(fmRegistrationForm.TxtRecordBook.Text) || string.IsNullOrEmpty(fmRegistrationForm.TxtNickName.Text) ||
                 string.IsNullOrEmpty(fmRegistrationForm.TxtPass.Text) || string.IsNullOrEmpty(fmRegistrationForm.TxtRecoveryCode.Text))
             {
-                CustomClass.Alert("Не заполнены необходимые данные для регистрации!", Form_Alert.enmType.Error);
+                CustomClass.Alert("Не заполнены необходимые данные для регистрации!", FormUsrAlert.enmType.Error);
                 CallAcceptNullTxtBox(fmRegistrationForm);
             }
             else
@@ -522,7 +521,7 @@ namespace online_library_for_educ_inst
                 if ((fmRegistrationForm.TxtRecordBook.Text != "") && (fmRegistrationForm.TxtNickName.Text != "") && (fmRegistrationForm.TxtPass.Text != "") && (fmRegistrationForm.McBoxSex.SelectedIndex != -1)
                && (fmRegistrationForm.McHcKAgreeRules.Checked == false))
                 {
-                    CustomClass.Alert("Пожалуйста,подтвердите что вы ознакомились с условиями программы", Form_Alert.enmType.Info);
+                    CustomClass.Alert("Пожалуйста,подтвердите что вы ознакомились с условиями программы", FormUsrAlert.enmType.Info);
                 }
                 else if ((fmRegistrationForm.TxtRecordBook.Text != "") && (fmRegistrationForm.TxtNickName.Text != "") && (fmRegistrationForm.TxtPass.Text != "") && (fmRegistrationForm.McBoxSex.SelectedIndex != -1)
                    && fmRegistrationForm.McHcKAgreeRules.Checked)
@@ -597,14 +596,14 @@ namespace online_library_for_educ_inst
                         }
                         else
                         {
-                            CustomClass.Alert("Не заполнены необходимые данные для регистрации!", Form_Alert.enmType.Error);
+                            CustomClass.Alert("Не заполнены необходимые данные для регистрации!", FormUsrAlert.enmType.Error);
                         }
                     }
                 }
             }
             catch (MySqlException)
             {
-                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", Form_Alert.enmType.Error);
+                CustomClass.Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", FormUsrAlert.enmType.Error);
             }
         } /// Реализация асинхронного метода для подготовки вставки данных в базу данных с последующей валидацией 
 
@@ -642,7 +641,7 @@ namespace online_library_for_educ_inst
             {
                 if (sLine == fmRegistrationForm.TxtNickName.Text)
                 {
-                    CustomClass.Alert("В поле никнейма недопустимы нецензурные слова!", Form_Alert.enmType.Error);
+                    CustomClass.Alert("В поле никнейма недопустимы нецензурные слова!", FormUsrAlert.enmType.Error);
                     fmRegistrationForm.TxtNickName.Text = null;
                     return;
                 }
@@ -653,7 +652,7 @@ namespace online_library_for_educ_inst
         {
             if (fmRegistrationForm.TxtNickName.Text.Length > CustomClass.MAX_NUMBER_CHARACTERS)
             {
-                CustomClass.Alert("Введенное значение превысило допустимый размер. Строка укорочена до 25 символов", Form_Alert.enmType.Info);
+                CustomClass.Alert("Введенное значение превысило допустимый размер. Строка укорочена до 25 символов", FormUsrAlert.enmType.Info);
                 fmRegistrationForm.TxtNickName.Text = fmRegistrationForm.TxtNickName.Text.Substring(0, 25); 
             }
         } /// Метод для корректировки длины никнейма
@@ -663,7 +662,7 @@ namespace online_library_for_educ_inst
         {
             string password = GetGeneratePassword(CustomClass.MAX_PASSWORD_LENGTH);
             fmRegistrationForm.TxtPass.Text = password;
-            CustomClass.Alert("Пароль успешно сгенерирован!", Form_Alert.enmType.Success);
+            CustomClass.Alert("Пароль успешно сгенерирован!", FormUsrAlert.enmType.Success);
         } /// Вызов метода GetGeneratePassword который возращает криптографическии стойкий пароль пользователю 
           /// и вставляет его в компонет TextBox
 
@@ -671,7 +670,7 @@ namespace online_library_for_educ_inst
         {                                                                               
             string smeaningfulWord = GetGenerateMeaningfulWord();
             fmRegistrationForm.TxtRecoveryCode.Text = smeaningfulWord;
-            CustomClass.Alert("Подобрано секретное слово для ваша аккаунта!", Form_Alert.enmType.Success);
+            CustomClass.Alert("Подобрано секретное слово для ваша аккаунта!", FormUsrAlert.enmType.Success);
         } /// Вызов метода GetGenerateMeaningfulWord который возращает секретное слово для возможности восстановления аккаунта 
           /// и вставляет его в компонет TextBox
 

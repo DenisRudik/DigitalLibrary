@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using CustomAlertBoxDemo;
 
 
 
@@ -163,7 +162,7 @@ namespace online_library_for_educ_inst
         private void PictDelTxtRecordBook_Click(object sender, EventArgs e)
         {
             TxtRecordBook.Text = null;
-            CustomClass.Alert("Данные о зачётки успешно удалены!", Form_Alert.enmType.Info);
+            CustomClass.Alert("Данные о зачётки успешно удалены!", FormUsrAlert.enmType.Info);
         }
 
         private void PictDelTxtNickName_MouseEnter(object sender, EventArgs e)
@@ -213,7 +212,7 @@ namespace online_library_for_educ_inst
 
         private void BtnReg_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         }
         
         private void BtnReg_Click(object sender, EventArgs e)
@@ -223,7 +222,7 @@ namespace online_library_for_educ_inst
 
         private void McBoxSex_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
         }
 
         private void McHcKAgreeRules_MouseLeave(object sender, EventArgs e)
@@ -233,7 +232,7 @@ namespace online_library_for_educ_inst
 
         private void McHcKAgreeRules_MouseEnter(object sender, EventArgs e)
         {
-            CustomClass.PlaySoundEffect(Form_Alert.enmNamesOfSoundProject.SoundCursor.ToString());
+            CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundCursor.ToString());
             McHcKAgreeRules.ForeColor = Color.ForestGreen;
         }
 
