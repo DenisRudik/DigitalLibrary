@@ -211,52 +211,195 @@ using MySqlConnector;
                 SoundPlayer.Play();
             }
         }
-        public static void Alert(string msg, FormUsrAlert.enmType type) /// обязательный метод для создания кастомного AlertBox.
+    /// <summary>
+    /// Рисует фон формы: градиент, два световых пятна и три полупрозрачные волны.
+    /// </summary>
+    /// <returns>
+    /// Готовый <see cref="Bitmap"/> или <c>null</c>, если ширина или высота меньше 1.
+    /// Вызывающий код должен сам освободить его через <c>Dispose()</c>.
+    /// WclientSize - высота формы клиента
+    /// hClientSize - ширина формы клиента
+    /// rIn - Первый параметр для начального градиента
+    /// gIn - Второй параметр для начального градиента
+    /// bIn - Третий параметр для начального градиента
+    /// 
+    /// rOut - Первый параметр для конечного градиента
+    /// gOut - Второй параметр для конечного градиента
+    /// bOut - Третий параметр для конечного градиента
+    /// 
+    /// 
+    /// </returns>
+    /// 
+    public static Bitmap BuildBackgroundWin(int wClientSize, int hClientSize,
+                                            int rIn, int gIn, int bIn, int rOut, int gOut, int bOut)
+
+    {
+
+        if (wClientSize < 1 || hClientSize < 1) return null;
+
+        var bmp = new Bitmap(wClientSize, hClientSize);
+        var g = Graphics.FromImage(bmp);
+
+
+        g.SmoothingMode = SmoothingMode.AntiAlias;
+        var rect = new Rectangle(0, 0, wClientSize, hClientSize);
+
+        // 1. Основной градиент: тёмно-синий -> насыщенный голубой
+        using (var br = new LinearGradientBrush(rect,
+            Color.FromArgb(rIn, gIn, bIn), Color.FromArgb(rOut, gOut, bOut), 35f))
+            g.FillRectangle(br, rect);
+
+        // 2. Мягкое свечение в правом верхнем углу
+        DrawGlow(g, new PointF(wClientSize * 0.85f, hClientSize * 0.15f), wClientSize * 0.45f, Color.FromArgb(90, 80, 200, 255));
+        // и слева снизу
+        DrawGlow(g, new PointF(wClientSize * 0.10f, hClientSize * 0.90f), wClientSize * 0.40f, Color.FromArgb(70, 120, 90, 255));
+
+        // 3. Полупрозрачные волны
+        DrawWave(g, wClientSize, hClientSize, 0.62f, 0.08f, Color.FromArgb(40, 255, 255, 255));
+        DrawWave(g, wClientSize, hClientSize, 0.75f, 0.06f, Color.FromArgb(30, 0, 40, 120));
+        DrawWave(g, wClientSize, hClientSize, 0.88f, 0.05f, Color.FromArgb(35, 0, 174, 221));
+
+        return bmp;
+    } 
+
+    private static void DrawGlow(Graphics g, PointF c, float r, Color color)
+    {
+        var path = new GraphicsPath();
+        path.AddEllipse(c.X - r, c.Y - r, r * 2, r * 2);
+        var pg = new PathGradientBrush(path)
+        {
+            CenterColor = color,
+            SurroundColors = new[] { Color.FromArgb(0, color) }
+        };
+        g.FillPath(pg, path);
+    }
+    // метод отрисовки свечения у заднего фона  
+
+
+    private static void DrawWave(Graphics g, int w, int h, float yRel, float ampRel, Color color)
+    {
+        float y = h * yRel, a = h * ampRel;
+        var path = new GraphicsPath();
+        path.AddBezier(0, y, w * 0.25f, y - a * 2, w * 0.45f, y + a * 2, w * 0.60f, y);
+        path.AddBezier(w * 0.60f, y, w * 0.78f, y - a * 1.5f, w * 0.90f, y + a, w, y - a * 0.5f);
+        path.AddLine(w, y - a * 0.5f, w, h);
+        path.AddLine(w, h, 0, h);
+        path.CloseFigure();
+        var br = new SolidBrush(color);
+        g.FillPath(br, path);
+    }
+    // метод отрисовки волн заднего фона
+
+
+    /// <summary>
+    /// Форма оповещения для пользователя
+    /// </summary>
+    /// <returns>
+    /// Аргументы метода:
+    /// sMsg - сообщение, необходимое для отображения пользователю
+    /// enmFormUsrAlert.enmType.type - статус окна оповещения  ("успешно - success", "внимание - warning", "критическая ошибка - critical")
+    /// </returns>
+    /// 
+
+    public static void Alert(string msg, FormUsrAlert.enmType type) /// обязательный метод для создания кастомного AlertBox.
                                                                       /// Наследуется от родительского класса Control 
         {
             FormUsrAlert frm = new FormUsrAlert();
             frm.showAlert(msg, type);
 
         }
-        public static void OnlyRussian(KeyPressEventArgs e) 
+    /// <summary>
+    /// метод для принудительного ввода кириллицы
+    /// </summary>
+    ///
+    /// <returns>
+    ///  Аргумент метода: e - Событие для нажатой клавиши
+    /// </returns>
+
+    public static void OnlyRussian(KeyPressEventArgs e) 
         {
             char k = e.KeyChar;
             if ((k < 'А' || k > 'я') && k != '\b' && k != 45)
             {
                 e.Handled = true;
             }
-        } /// функция для ввода кириллицы
+        }
+    /// <summary>
+    /// метод для принудительного ввода цифр
+    /// </summary>
+    /// 
+    /// <returns>
+    /// Аргумент метода: e - Событие для нажатой клавиши
+    /// </returns>
 
-        public static void OnlyNum(KeyPressEventArgs e) 
+    public static void OnlyNum(KeyPressEventArgs e) 
         {
             if (!((e.KeyChar >= (char)48 && e.KeyChar <= (char)57 || e.KeyChar == (char)32) || (e.KeyChar == (char)8)
                 || (e.KeyChar == (char)45) || (e.KeyChar == (char)44)))
                 e.Handled = true;
-        } /// функция для ввода цифр
+        }
 
-        public static void DisableSpace (KeyPressEventArgs e) 
+    /// <summary>
+    /// метод для отключения клавишы space
+    /// </summary>
+    /// <returns>
+    /// Аргумент метода: e - Событие для нажатой клавиши
+    /// </returns>
+
+    public static void DisableSpace (KeyPressEventArgs e) 
         {
             if (char.IsWhiteSpace(e.KeyChar))
                 e.Handled = true;
-        } //// метод запрета ввода пробела
+        }
 
-        public static void DisableSymbols(KeyPressEventArgs e)
+    /// <summary>
+    /// метод для блокировки ввода любых символов
+    /// </summary>>
+    /// <returns>
+    /// Аргумент метода: e - Событие для нажатой клавиши
+    /// </returns>
+
+
+    public static void DisableSymbols(KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
                 e.Handled = true;
-        } /// метод для блокировки ввода любых символов
+        }
 
-        public static void ShowRecoveryPasswordForUser() 
+    /// <summary>
+    /// Вызов окна восстановления пароля для аккаунта 
+    /// </summary>
+    /// <returns>
+    /// 
+    /// </returns>>
+
+    public static void ShowRecoveryPasswordForUser() 
         {
             Alert("Ваш восстановленный пароль : " + sBufferRecoveredPassword + " введите его!", FormUsrAlert.enmType.Info);
-        } /// процедура для вывода пользователю восстановленного пароля
+        }
 
-        public static void PlaySoundEffect(string sNameSound)
+    /// <summary>
+    ///  Метод для проигрывания различных звуковых эффектов в завимости от такого, какого рода ошибку выдала система.
+    ///  
+    /// </summary>
+    /// <returns>
+    /// Аргумент метода: sNameSound  - наименование файла .wav в локальном корне проекта
+    /// </returns>>
+    /// 
+    public static void PlaySoundEffect(string sNameSound)
         {
             SoundPlayer = new SoundPlayer(FormUsrAlert.fullPathToSound + sNameSound + ".wav");
-        } /// Метод для проигрывания различных звуковых эффектов в завимости от такого, какого рода ошибку выдала система. Входным параметром принимается наименование самого звука
+        }
+    /// <summary>
+    ///  Метод для придания формам "округленности" по углам
+    ///  
+    /// </summary>
+    /// <returns>
+    /// Аргумент метода: sNameForm  - ссылка на конкретную форму в проекте (оператор this)
+    /// </returns>>
+    /// 
 
-        public static void GetRoundedShapeForm(Form sNameForm)
+    public static void GetRoundedShapeForm(Form sNameForm)
         {
             GraphicsPath path = new GraphicsPath();
             int radius = 20;
@@ -265,9 +408,18 @@ using MySqlConnector;
             path.AddArc(sNameForm.Width - radius * 2, sNameForm.Height - radius * 2, radius * 2, radius * 2, 0, 90);
             path.AddArc(0, sNameForm.Height - radius * 2, radius * 2, radius * 2, 90, 90);
             sNameForm.Region = new Region(path);
-        } /// Метод для придания формам "округленности" по углам
+        }
 
-        public static void CallAnimationCloseForm(Form sNameForm)
+    /// <summary>
+    ///  Реализация анимации закрытия формы 
+    ///  
+    /// </summary>
+    /// <returns>
+    /// Аргумент метода: sNameForm  - ссылка на конкретную форму в проекте (оператор this)
+    /// </returns>>
+    /// 
+
+    public static void CallAnimationCloseForm(Form sNameForm)
         {
             for (int i = 0; i < MAX_UNIT_OPACITY; i++)
             {
@@ -275,16 +427,37 @@ using MySqlConnector;
                 sNameForm.Opacity -= UNIT_TRANSPARENCY;
             }
             sNameForm.Close();
-        } /// Реализация анимации закрытия формы 
+        }
 
-        public static void CallAnimationAppearanceForm(Form sNameForm, System.Windows.Forms.Timer sNameTimerComponent)
+    /// <summary>
+    /// Реализация анимации появления формы  
+    ///  
+    /// </summary>
+    /// <returns>
+    /// Аргументы метода: sNameForm  - ссылка на конкретную форму в проекте (оператор this)
+    ///                   sNameTimerComponent - ссылка на компонент класса Timer к которому привязывается время анимации
+    /// </returns>>
+    /// 
+
+    public static void CallAnimationAppearanceForm(Form sNameForm, System.Windows.Forms.Timer sNameTimerComponent)
         {
             if (sNameForm.Opacity >= FULL_OPACITY)
                 sNameTimerComponent.Stop();
             else sNameForm.Opacity += UNIT_TRANSPARENCY;
-        } /// Реализация анимации появления формы 
+        }
 
-        public async static Task GetConnToDBAsync(string ConnectionString, bool bOpenConnToDb)
+    /// <summary>
+    ///  Асинхронный метода для подлючения к локальной БД 
+    ///  
+    /// </summary>
+    /// <returns>
+    /// Аргументы метода: sConnectionString  - строка подлкючения к БД MySQL (описана в CustomClass)
+    ///                   bOpenConnToDb - булева переменная для запуска соединения с БД
+    ///                   
+    /// </returns>>
+    /// 
+
+    public async static Task GetConnToDBAsync(string ConnectionString, bool bOpenConnToDb)
         {
             try
             {
@@ -304,7 +477,7 @@ using MySqlConnector;
             {
                 Alert("Возникла ошибка при попытке соединения с сервером!.Проверьте работу OsPanel", FormUsrAlert.enmType.Error);
             }
-        } /// Описание асинхронного метода для подлючения к локальной БД
+        } 
     }
 
 

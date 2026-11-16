@@ -16,6 +16,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace online_library_for_educ_inst
 { 
     public class ChooseRoleFormClass
@@ -128,8 +129,6 @@ namespace online_library_for_educ_inst
                 fmChooseRoleForm.LblSubText.ForeColor = Color.FromArgb(r, g, b);
             }
         } /// Метод для появления плавного эффекта "выцветания" текста
-
-
 
 
 

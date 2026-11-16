@@ -42,13 +42,11 @@
             this.PictBtnAuthorization = new System.Windows.Forms.PictureBox();
             this.PictGifLogo = new System.Windows.Forms.PictureBox();
             this.PictBackToChoose = new System.Windows.Forms.PictureBox();
-            this.PictBackGroundGif = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictExitApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictBtnReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictBtnAuthorization)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictGifLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictBackToChoose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBackGroundGif)).BeginInit();
             this.SuspendLayout();
             // 
             // TimerToAnimationForm
@@ -93,7 +91,7 @@
             this.LblMainText.AutoSize = true;
             this.LblMainText.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LblMainText.ForeColor = System.Drawing.Color.Azure;
-            this.LblMainText.Location = new System.Drawing.Point(12, 66);
+            this.LblMainText.Location = new System.Drawing.Point(12, 98);
             this.LblMainText.Name = "LblMainText";
             this.LblMainText.Size = new System.Drawing.Size(56, 21);
             this.LblMainText.TabIndex = 5;
@@ -105,7 +103,7 @@
             this.LblSubText.AutoSize = true;
             this.LblSubText.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
             this.LblSubText.ForeColor = System.Drawing.Color.Azure;
-            this.LblSubText.Location = new System.Drawing.Point(12, 118);
+            this.LblSubText.Location = new System.Drawing.Point(12, 137);
             this.LblSubText.Name = "LblSubText";
             this.LblSubText.Size = new System.Drawing.Size(58, 21);
             this.LblSubText.TabIndex = 6;
@@ -116,7 +114,7 @@
             this.LblNewSubText.AutoSize = true;
             this.LblNewSubText.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
             this.LblNewSubText.ForeColor = System.Drawing.Color.Azure;
-            this.LblNewSubText.Location = new System.Drawing.Point(12, 285);
+            this.LblNewSubText.Location = new System.Drawing.Point(12, 303);
             this.LblNewSubText.Name = "LblNewSubText";
             this.LblNewSubText.Size = new System.Drawing.Size(56, 21);
             this.LblNewSubText.TabIndex = 7;
@@ -125,7 +123,7 @@
             // PictExitApp
             // 
             this.PictExitApp.Image = global::online_library_for_educ_inst.Properties.Resources.IconDefaultExitWelcomForm;
-            this.PictExitApp.Location = new System.Drawing.Point(920, 0);
+            this.PictExitApp.Location = new System.Drawing.Point(920, 30);
             this.PictExitApp.Name = "PictExitApp";
             this.PictExitApp.Size = new System.Drawing.Size(64, 64);
             this.PictExitApp.TabIndex = 12;
@@ -137,7 +135,7 @@
             // PictBtnReg
             // 
             this.PictBtnReg.Image = global::online_library_for_educ_inst.Properties.Resources.IconDefaultReg;
-            this.PictBtnReg.Location = new System.Drawing.Point(36, 310);
+            this.PictBtnReg.Location = new System.Drawing.Point(36, 339);
             this.PictBtnReg.Name = "PictBtnReg";
             this.PictBtnReg.Size = new System.Drawing.Size(128, 128);
             this.PictBtnReg.TabIndex = 11;
@@ -150,7 +148,7 @@
             // 
             this.PictBtnAuthorization.BackColor = System.Drawing.Color.Transparent;
             this.PictBtnAuthorization.Image = global::online_library_for_educ_inst.Properties.Resources.IconDefaultAuth;
-            this.PictBtnAuthorization.Location = new System.Drawing.Point(36, 154);
+            this.PictBtnAuthorization.Location = new System.Drawing.Point(36, 172);
             this.PictBtnAuthorization.Name = "PictBtnAuthorization";
             this.PictBtnAuthorization.Size = new System.Drawing.Size(128, 128);
             this.PictBtnAuthorization.TabIndex = 10;
@@ -174,7 +172,7 @@
             // 
             this.PictBackToChoose.BackColor = System.Drawing.Color.Transparent;
             this.PictBackToChoose.Image = global::online_library_for_educ_inst.Properties.Resources.ArrowBackDefault;
-            this.PictBackToChoose.Location = new System.Drawing.Point(0, 0);
+            this.PictBackToChoose.Location = new System.Drawing.Point(0, 30);
             this.PictBackToChoose.Name = "PictBackToChoose";
             this.PictBackToChoose.Size = new System.Drawing.Size(50, 50);
             this.PictBackToChoose.TabIndex = 3;
@@ -182,16 +180,6 @@
             this.PictBackToChoose.Click += new System.EventHandler(this.PictBackToChoose_Click);
             this.PictBackToChoose.MouseEnter += new System.EventHandler(this.PictBackToChoose_MouseEnter);
             this.PictBackToChoose.MouseLeave += new System.EventHandler(this.PictBackToChoose_MouseLeave);
-            // 
-            // PictBackGroundGif
-            // 
-            this.PictBackGroundGif.Image = global::online_library_for_educ_inst.Properties.Resources.BackGroundWelcomeForm;
-            this.PictBackGroundGif.Location = new System.Drawing.Point(0, 24);
-            this.PictBackGroundGif.Name = "PictBackGroundGif";
-            this.PictBackGroundGif.Size = new System.Drawing.Size(984, 452);
-            this.PictBackGroundGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictBackGroundGif.TabIndex = 1;
-            this.PictBackGroundGif.TabStop = false;
             // 
             // FmWelcomeForm
             // 
@@ -207,7 +195,6 @@
             this.Controls.Add(this.PictGifLogo);
             this.Controls.Add(this.PictBackToChoose);
             this.Controls.Add(this.LowerComponentTile);
-            this.Controls.Add(this.PictBackGroundGif);
             this.Controls.Add(this.TopComponentTile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -220,12 +207,13 @@
             this.Activated += new System.EventHandler(this.WelcomeForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WelcomeForm_FormClosing);
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FmWelcomeForm_Paint);
+            this.Resize += new System.EventHandler(this.FmWelcomeForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.PictExitApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictBtnReg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictBtnAuthorization)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictGifLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictBackToChoose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictBackGroundGif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +227,6 @@
         #endregion
         public System.Windows.Forms.Timer TimerToAnimationForm;
         public MetroFramework.Controls.MetroTile TopComponentTile;
-        public System.Windows.Forms.PictureBox PictBackGroundGif;
         public MetroFramework.Controls.MetroTile LowerComponentTile;
         public System.Windows.Forms.PictureBox PictBackToChoose;
         public MetroFramework.Components.MetroToolTip ToolTipHelpUser;

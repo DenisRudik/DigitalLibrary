@@ -25,36 +25,22 @@ namespace online_library_for_educ_inst
         {
             fmWelcomeForm.BackColor = Color.Transparent;
 
+
             // Make your label transparent
-            fmWelcomeForm.PictBackToChoose.Parent = fmWelcomeForm.PictBackGroundGif;
 
             fmWelcomeForm.PictBackToChoose.BackColor = Color.Transparent;
 
-            fmWelcomeForm.PictGifLogo.Parent = fmWelcomeForm.PictBackGroundGif;
-
             fmWelcomeForm.PictGifLogo.BackColor = Color.Transparent;
-
-            fmWelcomeForm.LblMainText.Parent = fmWelcomeForm.PictBackGroundGif;
 
             fmWelcomeForm.LblMainText.BackColor = Color.Transparent;
 
-            fmWelcomeForm.LblSubText.Parent = fmWelcomeForm.PictBackGroundGif;
-
             fmWelcomeForm.LblSubText.BackColor = Color.Transparent;
-
-            fmWelcomeForm.LblNewSubText.Parent = fmWelcomeForm.PictBackGroundGif;
 
             fmWelcomeForm.LblNewSubText.BackColor = Color.Transparent;
 
-            fmWelcomeForm.PictBtnAuthorization.Parent = fmWelcomeForm.PictBackGroundGif;
-
             fmWelcomeForm.PictBtnAuthorization.BackColor = Color.Transparent;
 
-            fmWelcomeForm.PictBtnReg.Parent = fmWelcomeForm.PictBackGroundGif;
-
             fmWelcomeForm.PictBtnReg.BackColor = Color.Transparent;
-
-            fmWelcomeForm.PictExitApp.Parent = fmWelcomeForm.PictBackGroundGif;
 
             fmWelcomeForm.PictExitApp.BackColor = Color.Transparent;
         } /// Метод для реализации эффекта прозрачности у компонентов на форме
@@ -73,8 +59,8 @@ namespace online_library_for_educ_inst
 
         public static async void CallAnimatedDrawText(FmWelcomeForm fmWelcomeForm)
         {
-            byte shateOfRed = 0;
-            byte shateOfGreen = 0;
+            byte shateOfRed = 103;
+            byte shateOfGreen = 52;
             byte shateOfBlue = 0;
             byte desiredShateColor = 245;
 
@@ -86,11 +72,6 @@ namespace online_library_for_educ_inst
                 fmWelcomeForm.LblNewSubText.ForeColor = Color.FromArgb(r, g, b);
             }
         } /// Анимация появления текста
-
-
-
-
-
 
 
 

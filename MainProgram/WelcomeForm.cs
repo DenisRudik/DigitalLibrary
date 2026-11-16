@@ -7,6 +7,7 @@ namespace online_library_for_educ_inst
     public partial class FmWelcomeForm : Form
     {
         public static Form FRM_Welcome_Form_Instance;
+        public Bitmap _bg;
         public FmWelcomeForm()
         {
             InitializeComponent();   
@@ -122,6 +123,19 @@ namespace online_library_for_educ_inst
             {
                 CustomClass.PlaySoundEffect(FormUsrAlert.enmNamesOfSoundProject.SoundClose.ToString());
             }
+        }
+
+        private void FmWelcomeForm_Resize(object sender, EventArgs e)
+        {
+            _bg?.Dispose();
+            _bg = CustomClass.BuildBackgroundWin(ClientSize.Width, ClientSize.Height,103,52,0,181,101,29);
+            Invalidate();
+        }
+
+        private void FmWelcomeForm_Paint(object sender, PaintEventArgs e)
+        {
+            if (_bg != null) e.Graphics.DrawImageUnscaled(_bg, 0, 0);
+            else base.OnPaintBackground(e);
         }
     }
 }

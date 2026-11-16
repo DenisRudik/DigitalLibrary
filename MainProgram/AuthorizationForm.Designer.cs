@@ -296,7 +296,7 @@
             this.PictDelTxtRecordBook.MouseEnter += new System.EventHandler(this.PictDelTxtRecordBook_MouseEnter);
             this.PictDelTxtRecordBook.MouseLeave += new System.EventHandler(this.PictDelTxtRecordBook_MouseLeave);
             // 
-            // AuthorizationForm
+            // FmAuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -322,7 +322,7 @@
             this.Controls.Add(this.PictTopLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AuthorizationForm";
+            this.Name = "FmAuthorizationForm";
             this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Форма Авторизации";
